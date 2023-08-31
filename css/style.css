@@ -7,6 +7,23 @@
   --site-font: 'Quicksand', sans-serif;
   --weight-600: 600;
 }
+#navcolor {
+  background-color: #fff !important;
+  font-size: 150%;
+}
+ #navcolor h2{
+  text-align: left;
+  color: #2490eb;
+ }
+ #navcolor img{
+  margin-left: 5px;
+ }
+ 
+/* nav font color */
+.nav-link {
+  color: #2490eb !important;
+}
+
 
 body {
   font-family: var(--site-font);
