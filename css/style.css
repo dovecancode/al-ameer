@@ -4,7 +4,6 @@
   --primary-color: #2490eb;
   --secondary-color: #1cba9f;
   --white: #fff;
-
   --site-font: 'Quicksand', sans-serif;
   --weight-600: 600;
 }
@@ -108,4 +107,51 @@ h4,
 h5,
 h6 {
   font-weight: var(--weight-600);
+}
+
+
+
+.home-link,
+.al-ameer {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  width: 150px;
+}
+
+.header h2 {
+  text-align: center;
+  color: var(--secondary-color);
+}
+
+.main {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info,
+.contact,
+.appointment {
+  border: var(--primary-color) 1px solid;
+  border-radius: 10px;
+  padding: 10px 15px;
+  color: var(--primary-color);
+}
+
+.contact,
+.appointment {
+  margin-top: 10px;
+}
+
+.col {
+  margin: 10px;
+}
+
+.date {
+  padding: 0 0 0 10px;
+  border: 1px #c2c2c2 solid;
+  border-radius: 5px;
+  height: 37px;
 }
