@@ -27,6 +27,9 @@
 
 body {
   font-family: var(--site-font);
+
+  background: rgb(255, 255, 255);
+=======
   background: #fff;
 }
 
@@ -61,6 +64,7 @@ body {
   font-size: 25px;
   margin-bottom: 20px;
   margin: auto;
+
 }
 
 /* footer */
@@ -128,6 +132,29 @@ h6 {
 }
 
 
+
+/* ABOUT US CSS START  */
+
+#clinic-image, #doctor {
+
+  display: grid;
+   place-items: center;
+   align-content: center;
+   height: auto;
+
+}
+
+#aboutus, #doctortrustees {
+  background-color: #1cbaa0 ;
+  border-radius: 10px;
+  color: #ffff;
+}
+img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+=======
 .modal-dialog {
   max-width: 900px;
 }
@@ -178,4 +205,5 @@ h6 {
   border-radius: 5px;
   height: 37px;
 }
+
 
