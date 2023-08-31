@@ -2,7 +2,9 @@
 
 :root {
   --primary-color: #2490eb;
+  --secondary-color: #1cba9f;
   --white: #fff;
+
   --site-font: 'Quicksand', sans-serif;
   --weight-600: 600;
 }
