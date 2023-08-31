@@ -11,8 +11,95 @@
 
 body {
   font-family: var(--site-font);
-  background: red;
+  background: #fff;
 }
+
+.w-100 {
+  width: 70%!important;
+}
+/* hero */
+.hero{
+  background-color: #fff;
+  overflow: hidden;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 90px auto;
+}
+.hero-content{
+  flex: 1;
+  width: 600px;
+  margin: 0px 25px;
+  animation: fadeInUp 2s ease;
+}
+.hero-content h2-1{
+  font-size: 45px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+.hero-content h3-1{
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+/* footer */
+
+footer {
+  background-color: #fff;
+  color: #000;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: left;
+  justify-content: space-between;
+  padding: 0;
+  display: flex;
+}
+.content {
+  padding: 30px;
+  margin-left: 50px;
+}
+.content p {
+  text-align: justify;
+}
+.content img{
+  width: 30%;
+}
+.contact-us img{
+  width: 40%;
+}
+.services {
+  text-decoration: none;
+  list-style: none;
+}
+.menu {
+  text-decoration: none;
+  list-style: none; 
+}
+.contact-us {
+  text-decoration: none;
+  list-style: none;
+}
+footer-bottom {
+  display: block;
+  background-color: #1cba9f;
+  padding: 10px;
+  margin: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+footer-bottom p{
+  background-color: #1cba9f;
+  color: #fff;
+  margin: 0;
+  bottom: 0;
+}
+
 
 h1,
 h2,
