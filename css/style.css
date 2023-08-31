@@ -11,7 +11,7 @@
 
 body {
   font-family: var(--site-font);
-  background: red;
+  background: rgb(255, 255, 255);
 }
 
 h1,
@@ -22,3 +22,27 @@ h5,
 h6 {
   font-weight: var(--weight-600);
 }
+
+
+/* ABOUT US CSS START  */
+
+#clinic-image, #doctor {
+
+  display: grid;
+   place-items: center;
+   align-content: center;
+   height: auto;
+
+}
+
+#aboutus, #doctortrustees {
+  background-color: #1cbaa0 ;
+  border-radius: 10px;
+  color: #ffff;
+}
+img {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+
