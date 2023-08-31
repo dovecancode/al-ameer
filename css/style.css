@@ -55,6 +55,7 @@ body {
   font-size: 45px;
   margin-bottom: 20px;
   margin: auto;
+
 }
 .hero-content h3-1{
   font-size: 25px;
@@ -127,6 +128,11 @@ h6 {
 }
 
 
+.modal-dialog {
+  max-width: 900px;
+}
+
+
 
 .home-link,
 .al-ameer {
@@ -172,3 +178,4 @@ h6 {
   border-radius: 5px;
   height: 37px;
 }
+
