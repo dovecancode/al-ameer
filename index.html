@@ -6,37 +6,31 @@
     <title>Home | Al - Ameer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 
   </head>
   <body>
     <!-- NAV	============================== -->
-    <nav class="navbar  fixed-top navbar-expand-xxl xxl- bg-light "id="navcolor" >
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="img/logo.png" alt="This contains logo" height="100"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <h2>Al Ameer Medical Center</h2>
-        <div class="collapse navbar-collapse justify-content-center" id="navbarTogglerDemo02">
-          <!-- Remove .ms-auto or .me-auto class and add .justify-content-center next to the .navbar-collapse to center the content.
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0"> -->
-                
-                <ul class="navbar-nav mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html"><span class="nav-spacing">HOME</span></a>
-                  </li>
-                  <a class="nav-link" href="#"><span class="nav-spacing">ABOUT US</span></a>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="nav-spacing">VISIT US</span></a>
-                  </li>
-                </ul>      
-        </div>
-      </div>
-    </nav>
+    <header>
+      <nav>
+          <ul class="navbar">
+              <li class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></li>
+              <h3>Al-Ameer Clinic</h3>
+              <input type="checkbox" id="check">
+              <span class="menu">
+                  <li><a href="index.html" class="home">Home</a></li>
+                  <li><a href="about.html">About us</a></li>
+                  <li><a href="">Visit us</a></li>
+                  <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+              </span>
+              <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+          </ul>
+      </nav>
+  </header>
+
 <!-- End of navbar -->
     <!-- HEADER	============================== -->
 
@@ -72,11 +66,15 @@
                       AI diagnostics, and personalized treatments demonstrates his commitment to providing cutting-edge solutions for patients. However, 
                       it is his patient-centric philosophy that truly sets his apart. Dr. Ahmeed's belief in fostering a holistic healing environment, 
                       characterized by empathy and communication, underscores his dedication to patient well-being.</p-1>
+                      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Check our Professionals</button>
             </div>
+           
             <div class="hero-image">
+     
                 <img src="img/founder.jpg" width="500" height="700">
             </div>
         </div>
+       
     </section>
 <section>
         <div class="row">
@@ -112,47 +110,24 @@
               </p-3>
             </div>
           </div>
-
-    <!-- FOOTER	STARTS -->
-    <footer>
-
-      <div class="content">
-          <img src="img/logo.png" alt="logo2">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas commodi <br> quibusdam vel explicabo soluta impedit cumque animi.Quaerat maiores <br> suscipit ipsa atque! Velit ullam expedita recusandae omnis quaerat,<br> minima ipsam.</p>
-      </div>
-
-      <ul class="services">
-        <h2>Our Services</h2>
-        <li><a href="">Internal Medicine</a></li>
-        <li><a href="">Surgery</a></li>
-        <li><a href="">Obstetrics and Gynecology</a></li>
-        <li><a href="">Pediatrics</a></li>
-        <li><a href="">Radiology</a></li>
-        <li><a href="">Emergency</a></li>
-      </ul>
-
-      <ul class="menu">
-        <h2>Menu</h2>
-        <li><a href="">Home</a></li>
-        <li><a href="">About-us</a></li>
-        <li><a href="">Visit-us</a></li>
-      </ul>
-
-      <ul class="contact-us">
-        <h2>Contact us</h2>
-        <li><a href="">address</a></li>
-        <li><a href="">992-7331 to 35</a></li>
-        <li><a href="">+6395-432-2289</a></li>
-        <li><a href="">Al-Ameer@gmail.com</a></li>
-      <img src="img/logo.png" alt="logo3">
-      </ul>
-
-    </footer>
+          <!-- Column Two -->
+          <div class="column">
+            <div class="card">
+              <div class="icon">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3-3>Super Secure</h3-3>
+              <br>
+              <p-3>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+                asperiores natus ad molestiae aliquid explicabo. Iste eaque quo et
+                commodi.
+              </p-3>
+            </div>
+          </div>
 
 
-    <!-- FOOTER	============================== -->
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Check our Professionals</button>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -197,9 +172,42 @@
       </div>
     </div>
 
-    <footer-bottom>
-      <P>Copyright&copy;2023, Al-Ameer Hospital. All Rights Reserved.</P>
-    </footer-bottom>
+        <!-- FOOTER	STARTS -->
+
+        <footer>
+          <div class="content">
+          <img src="img/Al-Ameer logo2.png" alt="logo">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Cumque nobis accusantium ea modi quidem iure id <br> ducimus quisquam voluptate laboriosam blanditiis <br> eligendi, pariatur hic maxime. Corporis quos nam aperiam eveniet?</p>
+         </div>
+
+          <ul class="our-service">
+            <h1>Our Services</h1>
+            <ul><a href="#">Internal Medicine</a></ul>
+            <ul><a href="#">Surgery</a></ul>
+            <ul><a href="#">Obstetrics and Gynecology</a></ul>
+            <ul><a href="#">Pediatrics</a></ul>
+            <ul><a href="#">Radiology</a></ul>
+            <ul><a href="#">Emergency</a></ul>
+          </ul>
+
+          <ul class="menu-footer">
+            <h1>Menu</h1>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Visit-us</a></li>
+          </ul>
+
+          <ul class="contact-us">
+            <h1>Contact Us</h1>
+            <li><i class='bx bx-map'></i>Al-Ameer Clinic Earth</li>
+            <li><i class='bx bxs-phone' ></i>992-7331 to 35</li>
+            <li><i class='bx bx-phone' ></i>(062) 992 7337 (Fax)</li>
+            <li><i class='bx bx-envelope' ></i>Al-Ameer@gmail.com</li>
+            <img src="img/clinic-logo.png" alt="logo">
+          </ul>
+
+        </footer>
+
     <!-- FOOTER ENDS -->
 
   </body>
