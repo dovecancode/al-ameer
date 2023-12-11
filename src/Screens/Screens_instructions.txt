@@ -1,0 +1,5 @@
+Screen naming convention must be the following example
+
+HomeScreen
+AboutScreen
+etc...

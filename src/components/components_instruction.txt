@@ -1,0 +1,10 @@
+components should be name like the following and inside it always put an index.jsx file
+
+Header
+Navbar
+Infosection
+
+etc...
+
+
+Look for other developers on how they name their components learn from their patterns

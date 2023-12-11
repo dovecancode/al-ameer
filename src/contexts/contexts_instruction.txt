@@ -1,0 +1,5 @@
+context namin convention should be like the following
+
+DoctorsContext
+AuthContext
+etc.....
