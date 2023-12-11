@@ -1,0 +1,7 @@
+export { default as AboutScreen } from './AboutScreen'
+export { default as AppointmentScreen } from './AppointmentScreen'
+export { default as ContactScreen } from './ContactScreen'
+export { default as DoctorsScreen } from './DoctorsScreen'
+export { default as HomeScreen } from './HomeScreen'
+export { default as NewsScreen } from './NewsScreen'
+export { default as ServicesScreen } from './ServicesScreen'
