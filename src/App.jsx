@@ -1,13 +1,17 @@
-import AcUnitIcon from '@mui/icons-material/AcUnit'
-import { Typography } from '@mui/material'
-import { FaHome } from 'react-icons/fa'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <AcUnitIcon />
-      <FaHome />
-      <Typography variant="h1">Al-Ameer</Typography>
+      <div>
+        <h1>Navigation</h1>
+      </div>
+
+      <Outlet />
+
+      <div>
+        <h2>Footer</h2>
+      </div>
     </>
   )
 }
