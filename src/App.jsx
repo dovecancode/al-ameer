@@ -1,7 +1,8 @@
 import AcUnitIcon from '@mui/icons-material/AcUnit'
 import { Typography } from '@mui/material'
 import { FaHome } from 'react-icons/fa'
-import Header from './components/Header/index'
+import Header from './components/Header'
+import Navbar from './components/Navbar'
 import { Outlet } from 'react-router-dom'
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
       <div>
         <Header />
+        <Navbar />
         <h1>Navigation</h1>
       </div>
 
