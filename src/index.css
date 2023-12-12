@@ -2,15 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
- --main-background : #fff;
+ --main-background : #FCFEFE;
  --main-text-color : #212124;
  --header-primary-color : #1F2B6C;
  --header-secondary-color : #159EEC;
  --footer-background : #1F2B6C;
  --footer-text-color : #BFD2F8;
  --navbar-background : #1F2B6C;
- --navbar-text-color : #fff;
+ --navbar-text-color : #FCFEFE;
+ --navbar-secondary-color : #BFD2F8;
  --navbar-hover-color : #159EEC;
+ --button-text-color : #1F2B6C;
+ --button-background: #BFD2F8;
 }
 
 * {
@@ -18,10 +21,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
   font-size: 12px;
 }
 
 body {
+  background-color: var(--main-background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
