@@ -3,7 +3,6 @@
   justify-content: space-between;
   align-items: center;
   margin: 1.9rem 5.2rem;
-  opacity: 1;
 }
 
 .topMostLogo,
@@ -48,22 +47,18 @@
 }
 
 @media (max-width: 768px) {
-html {
- font-size: 50%
-}
-
-  .topMostRightContainer {
-    margin: 0 auto;
-  }
-
-  .topMostRightContents {
-    margin: 0 auto;
+  html {
+    font-size: 50%;
   }
 }
 
 @media (max-width: 425px) {
-   .topMostLogo,
+  .topMostLogo,
   .secondWord {
     display: none;
+  }
+
+  .topMostRightContents {
+    margin: 0 auto;
   }
 }
