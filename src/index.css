@@ -1,20 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+html {
+  font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+
 :root {
- --main-background : #fff;
- --main-text-color : #212124;
- --header-primary-color : #1F2B6C;
- --header-secondary-color : #159EEC;
- --footer-background : #1F2B6C;
- --footer-text-color : #BFD2F8;
- --navbar-background : #1F2B6C;
- --navbar-text-color : #fff;
- --navbar-hover-color : #159EEC;
+  --main-background: #fff;
+  --main-text-color: #212124;
+  --header-primary-color: #1f2b6c;
+  --header-secondary-color: #159eec;
+  --footer-background: #1f2b6c;
+  --footer-text-color: #bfd2f8;
+  --navbar-background: #1f2b6c;
+  --navbar-text-color: #fff;
+  --navbar-hover-color: #159eec;
 }
 
 * {
-  font-family: 'Work Sans';
+  /* font-family: 'Work Sans'; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;

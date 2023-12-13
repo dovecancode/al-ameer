@@ -1,54 +1,58 @@
 .topMostContainer {
- display: flex;
- justify-content: space-between;
- align-items: center;
- margin: 1.9rem 5.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.9rem 5.2rem;
 }
 
-.topMostLogo, .secondWord {
- font-family: 'Yeseva One';
- color : var(--header-primary-color);
- font-size: 3rem;
+.topMostLogo,
+.secondWord {
+  font-family: 'Yeseva One';
+  color: var(--header-primary-color);
+  font-size: 3rem;
 }
 
 .secondWord {
- color: var(--header-secondary-color);
+  color: var(--header-secondary-color);
 }
 
-.topMostRightContainer, .topMostRightContents {
- display: flex;
- color: var(--header-primary-color);
+.topMostRightContainer,
+.topMostRightContents {
+  display: flex;
+  color: var(--header-primary-color);
 }
 
 .topMostRightContainer {
- flex-wrap: wrap;
- gap: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .topMostRightContents {
- gap: .5rem;
+  gap: 0.5rem;
 }
 
-.topMostText, .topMostInfo {
- font-size: 1.35rem;
+.topMostText,
+.topMostInfo {
+  font-size: 1.35rem;
 }
 
 .topMostInfo {
- color: var(--header-secondary-color);
+  color: var(--header-secondary-color);
 }
 
 @media (max-width: 768px) {
- html {
-  font-size: 50%;
- }
+  html {
+    font-size: 50%;
+  }
 }
 
 @media (max-width: 425px) {
- .topMostLogo, .secondWord {
-  display: none;
- }
+  .topMostLogo,
+  .secondWord {
+    display: none;
+  }
 
- .topMostRightContents {
-  margin: 0 auto;
- }
+  .topMostRightContents {
+    margin: 0 auto;
+  }
 }
