@@ -40,7 +40,6 @@ function App() {
       <div>
         <Header />
         <Navbar />
-        <h1>Navigation</h1>
       </div>
 
       <main>
