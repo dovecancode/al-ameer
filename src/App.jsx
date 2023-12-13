@@ -38,6 +38,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div>
         <Header />
+        <Navbar />
         <h1>Navigation</h1>
       </div>
 

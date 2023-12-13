@@ -6,15 +6,18 @@ html {
 }
 
 :root {
-  --main-background: #fff;
+  --main-background: #fcfefe;
   --main-text-color: #212124;
   --header-primary-color: #1f2b6c;
   --header-secondary-color: #159eec;
   --footer-background: #1f2b6c;
   --footer-text-color: #bfd2f8;
   --navbar-background: #1f2b6c;
-  --navbar-text-color: #fff;
+  --navbar-text-color: #fcfefe;
+  --navbar-secondary-color: #bfd2f8;
   --navbar-hover-color: #159eec;
+  --button-text-color: #1f2b6c;
+  --button-background: #bfd2f8;
 }
 
 * {
@@ -22,10 +25,14 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
   font-size: 12px;
 }
 
 body {
+  background-color: var(--main-background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
