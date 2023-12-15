@@ -1,28 +1,44 @@
-import { topMost } from '../../Data';
-import '../Header/style.css';
+import { Container } from '@mui/material';
+import {
+  TopMostContainer,
+  TopMostLogo,
+  SpanWord,
+  TopMostRightContainer,
+  TopMostRightContents,
+  TopMostIcon,
+  TopMostRight,
+  TopMostText,
+  TopMostInfo,
+} from './style.js';
+import { topMost } from '../shared/ObjectProps/object.jsx';
 
 function Header() {
   return (
     <>
-      <section className="topMostContainer">
-        <h1 className="topMostLogo">
-          Al-<span className="secondWord">Ameer</span>
-        </h1>
-        <div className="topMostRightContainer">
-          {topMost.map((props) => {
-            const { id, icon, text, info } = props;
-            return (
-              <div key={id} className="topMostRightContents">
-                <p className="topMostIcon">{icon}</p>
-                <div className="topMostRightContent">
-                  <p className="topMostText">{text}</p>
-                  <p className="topMostInfo">{info}</p>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <Container>
+        <TopMostContainer component="section">
+          <TopMostLogo variant="h1">
+            Al-
+            <SpanWord variant="span">Ameer</SpanWord>
+          </TopMostLogo>
+          <TopMostRightContainer>
+            {topMost.map((props) => {
+              const { id, icon, text, info } = props;
+              return (
+                <TopMostRightContents key={id}>
+                  <TopMostIcon variant="inherit">{icon}</TopMostIcon>
+                  <TopMostRight>
+                    <TopMostText variant="inherit">{text}</TopMostText>
+                    <TopMostInfo variant="inherit" sx={{}}>
+                      {info}
+                    </TopMostInfo>
+                  </TopMostRight>
+                </TopMostRightContents>
+              );
+            })}
+          </TopMostRightContainer>
+        </TopMostContainer>
+      </Container>
     </>
   );
 }

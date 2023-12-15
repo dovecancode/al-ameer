@@ -28,7 +28,7 @@ html {
   text-decoration: none;
   list-style: none;
   scroll-behavior: smooth;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
 body {

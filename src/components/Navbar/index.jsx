@@ -1,14 +1,26 @@
-import React, { useState, useEffect } from 'react';
-import SearchIcon from '@mui/icons-material/Search';
+import * as React from 'react';
+import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import MenuItem from '@mui/material/MenuItem';
+import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
-import { pageLinks, Button } from '../../Data';
-import { NavLink, Link } from 'react-router-dom';
-import '../Navbar/style.css';
+import Link from '@mui/material/Link';
+import { pageLinks } from '../shared/ObjectProps/object';
+import ButtonLink from '../shared/ButtonLink';
 
-function Navbar() {
+function ResponsiveAppBar() {
+  const location = useLocation();
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [isToggle, setIsToggle] = useState(false);
   const [scrolling, setScrolling] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,73 +39,150 @@ function Navbar() {
     };
   }, []);
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+    setIsToggle(!isToggle);
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+    setIsToggle(false);
   };
 
   return (
-    <>
-      <nav className={`navbar ${scrolling ? 'scrolled' : ''}`}>
-        <Link to="/" className="activeLogo">
-          <h1 className="first">
-            Al-<span className="second">Ameer</span>
-          </h1>
-        </Link>
-        <div className={`navLink ${isMenuOpen ? 'active' : ''}`}>
-          {pageLinks.map((pageLink) => {
-            const { id, link, text } = pageLink;
-            return (
-              <NavLink key={id} to={link} className="link" onClick={closeMenu}>
-                {text}
-              </NavLink>
-            );
-          })}
-          <Link
-            to="appointment"
-            className="appointmentBtnActive"
-            onClick={closeMenu}
-          >
-            <Button word="Appointment" />
-          </Link>
-        </div>
-        <div className="navbarBtn">
-          <SearchIcon
-            className="searchIcon"
+    <AppBar position={scrolling ? 'fixed' : 'static'} top={0}>
+      <Container>
+        <Toolbar
+          sx={{
+            '@media (min-width: 319px)': {
+              paddingLeft: 0,
+              paddingRight: 0,
+              display: 'flex',
+              justifyContent: 'space-between',
+            },
+          }}
+        >
+          <Typography
+            variant="h1"
+            component="a"
+            href="/"
             sx={{
-              fontSize: 30,
-              marginRight: 3,
-              color: '#FCFEFE',
-              cursor: 'pointer',
+              display: { xs: 'flex', md: 'none' },
+              color: '#BFD2F8',
+              textDecoration: 'none',
+              '@media (max-width: 768px)': { fontSize: '3rem' },
             }}
-          />
-          <Link to="appointment" className="appointmentBtn">
-            <Button word="Appointment" />
-          </Link>
-        </div>
-        <div className="iconMenu" id="iconMenu" onClick={toggleMenu}>
-          {isMenuOpen ? (
-            <CloseIcon
+          >
+            Al-
+            <Box component="span" sx={{ color: '#FCFEFE' }}>
+              Ameer
+            </Box>
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            {pageLinks.map(({ id, link, text }) => (
+              <Link
+                key={id}
+                href={link}
+                underline="none"
+                sx={{
+                  marginRight: 2,
+                  color: location.pathname === link ? '#159EEC' : 'white',
+                  display: 'block',
+                  fontFamily: 'Work Sans',
+                  fontSize: '1.8rem',
+                  '&:hover': { color: '#159EEC' },
+                }}
+              >
+                {text}
+              </Link>
+            ))}
+          </Box>
+          <IconButton sx={{ p: 0 }}>
+            <SearchIcon
               sx={{
                 fontSize: 35,
+                marginRight: '1.5rem',
                 color: '#FCFEFE',
+                cursor: 'pointer',
+                display: { xs: 'none', md: 'flex' },
               }}
             />
-          ) : (
-            <MenuIcon
+          </IconButton>
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+            }}
+          >
+            <ButtonLink path="appointment" htmlELType="a">
+              appointment
+            </ButtonLink>
+          </Box>
+
+          <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+            {isToggle ? (
+              <CloseIcon
+                sx={{
+                  display: { xs: 'flex', md: 'none' },
+                  fontSize: '3.5rem',
+                  color: '#FCFEFE',
+                }}
+              />
+            ) : (
+              <MenuIcon
+                sx={{
+                  display: { xs: 'flex', md: 'none' },
+                  fontSize: '3.5rem',
+                  color: '#FCFEFE',
+                }}
+              />
+            )}
+          </IconButton>
+          <Menu
+            sx={{ mt: '48px' }}
+            id="menu-appbar"
+            anchorEl={anchorElUser}
+            anchorOrigin={{
+              horizontal: 'right',
+            }}
+            transformOrigin={{
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorElUser)}
+            onClose={handleCloseUserMenu}
+          >
+            <Box
               sx={{
-                fontSize: 35,
-                color: '#FCFEFE',
+                padding: '1rem 10rem',
+                '@media (max-width: 425px)': { padding: '1rem 5rem' },
               }}
-            />
-          )}
-        </div>
-      </nav>
-    </>
+            >
+              {pageLinks.map(({ id, link, text }) => (
+                <MenuItem onClick={handleCloseUserMenu}>
+                  <Link
+                    key={id}
+                    href={link}
+                    underline="none"
+                    sx={{
+                      fontFamily: 'Work Sans',
+                      fontSize: '1.8rem',
+                      fontWeight: location.pathname === link ? '700' : '',
+                      margin: '0 auto',
+                    }}
+                  >
+                    {text}
+                  </Link>
+                </MenuItem>
+              ))}
+              <MenuItem onClick={handleCloseUserMenu}>
+                <ButtonLink path="appointment" htmlELType="a">
+                  appointment
+                </ButtonLink>
+              </MenuItem>
+            </Box>
+          </Menu>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
-
-export default Navbar;
+export default ResponsiveAppBar;
