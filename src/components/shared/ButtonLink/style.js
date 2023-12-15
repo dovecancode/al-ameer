@@ -11,7 +11,7 @@ export const ButtonTextUI = styled(RouterLink)(({ theme }) => ({
   borderRadius: '5rem',
   color: theme.palette.primary.main,
   transition: '.4s ease',
-  '& > span': {
+  '& > span, a': {
     fontSize: '1.7rem',
     fontWeight: '500',
     fontFamily: "'Work Sans', sans-serif",
@@ -20,4 +20,4 @@ export const ButtonTextUI = styled(RouterLink)(({ theme }) => ({
     background: '#159EEC',
     color: '#fff',
   },
-}))
+}));

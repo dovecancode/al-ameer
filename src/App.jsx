@@ -1,7 +1,7 @@
-import { ThemeProvider, createTheme } from '@mui/material'
-import { Outlet } from 'react-router-dom'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
+import { ThemeProvider, createTheme } from '@mui/material';
+import { Outlet } from 'react-router-dom';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
 
 const theme = createTheme({
   palette: {
@@ -32,7 +32,7 @@ const theme = createTheme({
       color: '#159EEC',
     },
   },
-})
+});
 
 function App() {
   return (
@@ -50,7 +50,7 @@ function App() {
         <h2>Footer</h2>
       </div>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
