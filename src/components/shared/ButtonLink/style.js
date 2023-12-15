@@ -6,7 +6,7 @@ export const ButtonTextUI = styled(RouterLink)(({ theme }) => ({
   display: 'inline-block',
   textDecoration: 'none',
   textTransform: 'capitalize',
-  background: theme.palette.primary.accent,
+  background: theme.palette.accent.main,
   padding: '1rem 3rem',
   borderRadius: '5rem',
   color: theme.palette.primary.main,
