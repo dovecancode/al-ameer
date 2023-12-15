@@ -1,11 +1,12 @@
 // import { Container, Typography } from '@mui/material'
 import { Box, Container, Typography } from '@mui/material'
+import HeroBookAppt from '../HeroBookAppt'
 import ButtonLink from '../shared/ButtonLink'
 import { HeroSection, Span } from './style'
 
 function Hero() {
   return (
-    <HeroSection component="section">
+    <HeroSection className="hero" component="section">
       <Box
         sx={{
           display: 'flex',
@@ -38,6 +39,10 @@ function Hero() {
           </Box>
         </Container>
       </Box>
+
+      <Container>
+        <HeroBookAppt />
+      </Container>
     </HeroSection>
   )
 }
