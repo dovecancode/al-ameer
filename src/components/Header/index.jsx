@@ -22,8 +22,7 @@ function Header() {
             <SpanWord variant="span">Ameer</SpanWord>
           </TopMostLogo>
           <TopMostRightContainer>
-            {topMost.map((props) => {
-              const { id, icon, text, info } = props;
+            {topMost.map(({ id, icon, text, info }) => {
               return (
                 <TopMostRightContents key={id}>
                   <TopMostIcon variant="inherit">{icon}</TopMostIcon>
