@@ -1,8 +1,9 @@
 // import { Container, Typography } from '@mui/material'
-import { Box, Container, Typography } from '@mui/material'
+import { Box, Container, Grid } from '@mui/material'
 import HeroBookAppt from '../HeroBookAppt'
 import ButtonLink from '../shared/ButtonLink'
-import { HeroSection, Span } from './style'
+import SectionHeader from '../shared/SectionHeader'
+import { HeroSection } from './style'
 
 function Hero() {
   return (
@@ -20,23 +21,20 @@ function Hero() {
         }}
       >
         <Container>
-          <Box>
-            <Span variant="span">caring for life</Span>
-          </Box>
-          <Box sx={{ marginTop: '0.2rem', marginBottom: '3rem' }}>
-            <Typography variant="h1">
-              Leading the Way <br />
-              in Medical Excellence
-            </Typography>
-          </Box>
-          <Box>
-            {/* <RouterLink to="services">
-              <Link component="span">our services</Link>
-            </RouterLink> */}
-            <ButtonLink path="services" htmlELType="span">
-              our services
-            </ButtonLink>
-          </Box>
+          <Grid container>
+            <Grid item md={6}>
+              <SectionHeader
+                headingTag={1}
+                spanText="caring for life"
+                headingText={'Leading the Way Medical Excellence'}
+              />
+              <Box>
+                <ButtonLink path="services" htmlELType="span">
+                  our services
+                </ButtonLink>
+              </Box>
+            </Grid>
+          </Grid>
         </Container>
       </Box>
 
