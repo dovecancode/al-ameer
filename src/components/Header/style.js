@@ -10,8 +10,7 @@ export const TopMostContainer = styled(Box)(({ theme }) => ({
 
 export const TopMostLogo = styled(Typography)(() => ({
   '@media (max-width: 1024px)': { fontSize: '4.5rem' },
-  '@media (max-width: 768px)': { fontSize: '3rem' },
-  '@media (max-width: 425px)': { display: 'none' },
+  '@media (max-width: 768px)': { display: 'none' },
 }));
 
 export const SpanWord = styled(Box)(() => ({
@@ -23,10 +22,13 @@ export const TopMostRightContainer = styled(Box)(() => ({
   display: 'flex',
   flexWrap: 'wrap',
   color: '#1F2B6C',
+  '@media (max-width: 768px)': { margin: '0 auto' },
 }));
 
 export const TopMostRightContents = styled(Box)(() => ({
   display: 'flex',
+  '@media (max-width: 1024px)': { marginRight: '1rem' },
+  '@media (max-width: 768px)': { margin: '0 2rem' },
   '@media (max-width: 425px)': { margin: '0 auto' },
 }));
 
