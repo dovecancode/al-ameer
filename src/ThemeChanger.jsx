@@ -24,12 +24,13 @@ const theme = createTheme({
     },
     h2: {
       fontFamily: "'Yeseva One', serif",
-      fontSize: '2rem',
+      fontSize: 'clamp(2.5rem, 4vw, 3.2rem)',
       fontWeight: '400',
+      color: '#1F2B6C',
     },
     subtitle1: {
       fontFamily: "'Work Sans', sans-serif",
-      fontSize: 'clamp(1.6rem, 4vw, 2rem)',
+      fontSize: 'clamp(1.6rem, 4vw, 1.8rem)',
       fontWeight: '700',
       textTransform: 'uppercase',
       color: '#159EEC',
