@@ -12,7 +12,7 @@ const homeBox = [
 ]
 
 function HeroBookAppt() {
-  const matches = useMediaQuery('(width >= 35rem)')
+  const matches = useMediaQuery('(width >= 50rem)')
 
   return (
     <>
