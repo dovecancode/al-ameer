@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -12,11 +12,10 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
-import Link from '@mui/material/Link';
 import { pageLinks } from '../shared/ObjectProps/object';
 import ButtonLink from '../shared/ButtonLink';
 
-function ResponsiveAppBar() {
+function Navbar() {
   const location = useLocation();
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [isToggle, setIsToggle] = useState(false);
@@ -26,7 +25,6 @@ function ResponsiveAppBar() {
     const handleScroll = () => {
       if (window.scrollY > 0) {
         setScrolling(true);
-        setIsMenuOpen(false);
       } else {
         setScrolling(false);
       }
@@ -82,10 +80,10 @@ function ResponsiveAppBar() {
             {pageLinks.map(({ id, link, text }) => (
               <Link
                 key={id}
-                href={link}
+                to={link}
                 underline="none"
-                sx={{
-                  marginRight: 2,
+                style={{
+                  marginRight: '1.5rem',
                   color: location.pathname === link ? '#159EEC' : 'white',
                   display: 'block',
                   fontFamily: 'Work Sans',
@@ -157,12 +155,11 @@ function ResponsiveAppBar() {
               }}
             >
               {pageLinks.map(({ id, link, text }) => (
-                <MenuItem onClick={handleCloseUserMenu}>
+                <MenuItem key={id} onClick={handleCloseUserMenu}>
                   <Link
-                    key={id}
-                    href={link}
-                    underline="none"
-                    sx={{
+                    to={link}
+                    style={{
+                      color: '#1F2B6C',
                       fontFamily: 'Work Sans',
                       fontSize: '1.8rem',
                       fontWeight: location.pathname === link ? '700' : '',
@@ -185,4 +182,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;
