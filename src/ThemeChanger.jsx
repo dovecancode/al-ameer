@@ -41,6 +41,12 @@ const theme = createTheme({
       fontSize: '1.6rem',
       fontWeight: '400',
     },
+    linkTag: {
+      fontFamily: "'Work Sans', sans-serif",
+      fontWeight: '400',
+      fontSize: '1.8rem',
+      textDecoration: 'none',
+    },
   },
 })
 
