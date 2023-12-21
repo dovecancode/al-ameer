@@ -1,4 +1,5 @@
 import Hero from '../../components/Hero'
+import HomeSpecialties from '../../components/HomeSpecialties'
 import HomeWelcome from '../../components/HomeWelcome'
 
 function HomeScreen() {
@@ -6,6 +7,7 @@ function HomeScreen() {
     <>
       <Hero />
       <HomeWelcome />
+      <HomeSpecialties />
     </>
   )
 }
