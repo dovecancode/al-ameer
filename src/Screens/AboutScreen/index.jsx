@@ -1,5 +1,11 @@
+import AboutUs from '../../components/AboutUs'
+
 function AboutScreen() {
-  return <div>AboutScreen</div>
+  return (
+    <div>
+      <AboutUs />
+    </div>
+  );
 }
 
-export default AboutScreen
+export default AboutScreen;
