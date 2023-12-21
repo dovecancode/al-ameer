@@ -34,6 +34,12 @@ const theme = createTheme({
       textTransform: 'uppercase',
       color: '#159EEC',
     },
+    subtitle2: {
+      fontFamily: "'Work Sans', sans-serif",
+      fontSize: 'clamp(1.6rem, 4vw, 2rem)',
+      textTransform: 'capitalize',
+      color: '#1F2B6C',
+    },
     // style for paragraph
     body1: {
       fontFamily: "'Work Sans', sans-serif",
@@ -41,6 +47,6 @@ const theme = createTheme({
       fontWeight: '400',
     },
   },
-})
+});
 
 export default theme
