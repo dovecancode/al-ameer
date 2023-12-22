@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +13,7 @@ import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
 import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
-import { pageLinks } from '../shared/ObjectProps/object';
+import { pageLinks } from './pagelinks';
 import ButtonLink from '../shared/ButtonLink';
 
 function Navbar() {
@@ -81,7 +82,6 @@ function Navbar() {
               <Link
                 key={id}
                 to={link}
-                underline="none"
                 style={{
                   marginRight: '1.5rem',
                   color: location.pathname === link ? '#159EEC' : 'white',
@@ -140,9 +140,11 @@ function Navbar() {
             id="menu-appbar"
             anchorEl={anchorElUser}
             anchorOrigin={{
+              vertical: 'top',
               horizontal: 'right',
             }}
             transformOrigin={{
+              vertical: 'top', 
               horizontal: 'right',
             }}
             open={Boolean(anchorElUser)}
@@ -182,4 +184,11 @@ function Navbar() {
     </AppBar>
   );
 }
+
+Link.propTypes = {
+  id: PropTypes.number,
+  link: PropTypes.string,
+  text: PropTypes.string,
+};
+
 export default Navbar;
