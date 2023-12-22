@@ -10,7 +10,7 @@ import {
   TopMostText,
   TopMostInfo,
 } from './style.js';
-import { topMost } from '../shared/ObjectProps/object.jsx';
+import { topMost } from './data.jsx';
 
 function Header() {
   return (
