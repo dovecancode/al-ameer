@@ -20,7 +20,12 @@ export const Item = styled(Box)(({ theme }) => {
     '&:hover': {
       background: theme.palette.primary.main,
       color: theme.palette.accent.main,
+      borderRadius: '0.3125rem',
     },
+    '&:hover svg': {
+      fill: theme.palette.accent.main,
+    },
+
     '@media(width >= 37rem)': {
       flex: '1 0 25rem',
     },
