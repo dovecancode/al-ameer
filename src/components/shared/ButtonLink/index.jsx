@@ -8,11 +8,10 @@ function ButtonLink({ children, path }) {
       {children}
     </ButtonTextUI>
   )
-
-
+}
 ButtonLink.propTypes = {
   children: PropTypes.string,
   path: PropTypes.string,
-};
+}
 
-export default ButtonLink;
+export default ButtonLink
