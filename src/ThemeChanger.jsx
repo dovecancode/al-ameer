@@ -52,8 +52,9 @@ const theme = createTheme({
       fontWeight: '400',
       fontSize: '1.8rem',
       textDecoration: 'none',
+      display: 'inline-block',
     },
   },
-});
+})
 
 export default theme
