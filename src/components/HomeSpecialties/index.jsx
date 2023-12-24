@@ -11,6 +11,7 @@ function HomeSpecialties() {
     <SpeciaTiesSection>
       <Container>
         <SectionHeader
+          position="center"
           headingTag={2}
           spanText="always caring"
           headingText="Our Specialties"
