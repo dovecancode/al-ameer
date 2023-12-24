@@ -16,6 +16,7 @@ function HomeWelcome() {
       <Container>
         <Box className="content" sx={{ marginBottom: '7rem' }}>
           <SectionHeader
+            position="center"
             headingTag={2}
             spanText="welcome to al-ameer"
             headingText="A Great Place to Receive Care"
