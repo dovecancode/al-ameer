@@ -3,7 +3,7 @@ import { Box, Container, Stack, Typography } from '@mui/material'
 import SectionHeader from '../shared/SectionHeader'
 import { Item, SpeciaTiesSection } from './style'
 
-import HeartIcon from '../shared/HeartIcon'
+import { AlHeartIcon } from '../shared/Icons'
 import specialties from './data'
 
 function HomeSpecialties() {
@@ -32,7 +32,7 @@ function HomeSpecialties() {
               <Item key={specialty.forte} className="heart">
                 {/* <Box component="img" src={specialty.icon} /> */}
                 <Box>
-                  <HeartIcon />
+                  <AlHeartIcon />
                 </Box>
                 <Typography component="p">{specialty.forte}</Typography>
               </Item>
