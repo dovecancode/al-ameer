@@ -31,7 +31,6 @@ function HomeBookApptForm() {
 
   const { name, gender, email, phone, doctor, date, time, message } = inputField
 
-  console.log(inputField)
   return (
     <AppointmentSection className="home-appt">
       <Container>
