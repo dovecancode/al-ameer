@@ -144,7 +144,7 @@ function Navbar() {
               horizontal: 'right',
             }}
             transformOrigin={{
-              vertical: 'top', 
+              vertical: 'top',
               horizontal: 'right',
             }}
             open={Boolean(anchorElUser)}
