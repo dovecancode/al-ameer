@@ -1,4 +1,3 @@
-import { Container } from '@mui/material';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Span } from './style';
@@ -15,7 +14,7 @@ function LinkMap() {
   const cleanedPathname = pathName(location.pathname);
 
   return (
-    <Container>
+    <>
       <Span>
         <Link to="/" style={{ color: '#1F2B6C' }}>
           Home
@@ -25,7 +24,7 @@ function LinkMap() {
           {cleanedPathname}
         </Link>
       </Span>
-    </Container>
+    </>
   );
 }
 export default LinkMap;

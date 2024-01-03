@@ -1,9 +1,11 @@
-import AboutUs from '../../components/AboutUs'
+import TitlePage from '../../components/TitlePage'
+import AboutUsWelcome from '../../components/AboutUsWelcome';
 
 function AboutScreen() {
   return (
     <div>
-      <AboutUs />
+      <TitlePage pageTitle='About Us' bgimage='subhero-aboutus.jpg'/>
+      <AboutUsWelcome/>
     </div>
   );
 }
