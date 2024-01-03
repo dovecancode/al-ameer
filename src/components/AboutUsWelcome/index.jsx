@@ -66,8 +66,8 @@ function AboutUsWelcome() {
           <Typography sx={{ marginTop: '3rem' }}>
             A At Al-Ameer, our passion for healing goes beyond conventional
             healthcare. With values like Always Caring, 5-Star Care, and a
-            Legacy of Excellence, we`&apos`re not just your healthcare provider
-            – we`&apos`re your partner in wellness.
+            Legacy of Excellence, we{"'"}re not just your healthcare provider –
+            we{"'"}re your partner in wellness.
           </Typography>
           <Typography sx={{ marginTop: '2rem' }}>
             Believe in us for healthcare beyond expectations. Our dedicated team
