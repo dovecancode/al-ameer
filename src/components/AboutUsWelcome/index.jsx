@@ -1,49 +1,41 @@
-import { Stack, Box, Typography } from '@mui/material';
-import { WelcomeAboutUsSection } from './style';
+import { Stack, Box, Typography, useMediaQuery } from '@mui/material';
+import { WelcomeAboutUsSection, CircleWithText } from './style';
 import SectionHeader from '../shared/SectionHeader';
 import WelcomingStaff from '../../assets/img/aboutus/welcome-staff.jpg';
+import { items } from './data';
 
 function AboutUsWelcome() {
-  const CircleWithText = () => (
-    <span
-      style={{
-        display: 'inline-block',
-        backgroundColor: '#159EEC',
-        borderRadius: '50%',
-        width: '1.5rem',
-        height: '1.5rem',
-        marginRight: '1rem',
-      }}
-    ></span>
-  );
-
-  const items = [
-    'A Passion for Healing',
-    'All our best',
-    'Always Caring',
-    '5-Star Care',
-    'Believe in Us',
-    'A Legacy of Excellence',
-  ];
+  const isMobile = useMediaQuery('(max-width:425px)');
+  const isTablet = useMediaQuery('(max-width:768px)');
+  const isLaptop = useMediaQuery('(max-width:1024px)');
 
   return (
     <WelcomeAboutUsSection>
-      <Stack direction={{ xs: 'column', sm: 'row' }} spacing={4}>
-        <img
-          src={WelcomingStaff}
-          alt="Welcoming Staff"
-          style={{
-            height: '60rem',
-            '@media (maxWidth >= 768px)': { display: 'none' },
+      <Stack direction={isTablet ? 'column' : 'row'} spacing={4}>
+        <Box
+          sx={{
+            marginRight: isTablet ? 'auto' : 0,
+            marginLeft: isTablet ? 'auto' : 0,
+            textAlign: isTablet ? 'center' : 'left',
           }}
-        />
+        >
+          <Box
+            component="img"
+            src={WelcomingStaff}
+            alt="Welcoming Staff"
+            sx={{
+              width: isMobile ? '30rem' : isLaptop ? '50rem' : 'auto',
+              margin: isMobile ? '0 auto' : '0',
+            }}
+          />
+        </Box>
         <Box>
           <SectionHeader
             headingTag={1}
             spanText="welcome to al-ameer"
             headingText="Best Care for Your Good Health"
           />
-          <Stack direction="row">
+          <Stack direction={isMobile ? 'column' : 'row'}>
             {[0, 1].map((column) => (
               <Box
                 key={column}
@@ -51,7 +43,12 @@ function AboutUsWelcome() {
                   display: 'flex',
                   flexDirection: 'column',
                   gap: '1rem',
-                  marginRight: column === 0 ? '10rem' : 0,
+                  marginRight:
+                    (column === 0 && isMobile && 'unset') ||
+                    (column === 0 && isLaptop && '2rem') ||
+                    (column === 1 && '0') ||
+                    '10rem',
+                  marginTop: isMobile && column === 1 ? '1rem' : 'unset',
                 }}
               >
                 {items.slice(column * 3, column * 3 + 3).map((item, idx) => (

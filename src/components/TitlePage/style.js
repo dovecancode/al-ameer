@@ -17,6 +17,7 @@ export const SubHead = styled(Stack)(({ bgimage }) => {
       backgroundImage: `url('${bgimage}')`,
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
+      backgroundPosition: 'center',
       zIndex: '-1',
     },
   };
