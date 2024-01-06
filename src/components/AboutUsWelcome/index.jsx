@@ -2,7 +2,7 @@ import { Stack, Box, Typography, useMediaQuery } from '@mui/material';
 import { WelcomeAboutUsSection, CircleWithText } from './style';
 import SectionHeader from '../shared/SectionHeader';
 import WelcomingStaff from '../../assets/img/aboutus/welcome-staff.jpg';
-import { items } from './data';
+import { items } from './data.js';
 
 function AboutUsWelcome() {
   const isMobile = useMediaQuery('(max-width:425px)');
