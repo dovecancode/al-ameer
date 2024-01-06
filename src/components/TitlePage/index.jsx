@@ -1,9 +1,9 @@
 import { Box, Container, Typography } from '@mui/material'
+import PropTypes from 'prop-types'
+import LinkMap from '../shared/LinkMap'
 import { SubHead } from './style'
 
-import PropTypes from 'prop-types'
 import ColorBarImageUI from '../shared/ColorBarImageUI'
-import LinkMap from '../shared/LinkMap'
 
 function TitlePage({ pageTitle, bgimage }) {
   return (

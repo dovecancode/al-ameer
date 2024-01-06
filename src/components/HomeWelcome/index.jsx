@@ -2,11 +2,10 @@ import { Box, Container, Link, Typography, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { FaArrowRight } from 'react-icons/fa6'
 import { Link as ReactRouterLink } from 'react-router-dom'
-
+// import { WelcomeDoc } from '../../assets/img/home'
 import { WelcomeDoc } from '../../assets/img/home'
-import ColorBarImageUI from '../shared/ColorBarImageUI'
 import SectionHeader from '../shared/SectionHeader'
-import { ImageContain, WelcomeHomeSection } from './style'
+import { ColorBarImage, ImageContain, WelcomeHomeSection } from './style'
 
 function HomeWelcome() {
   const theme = useTheme()
@@ -60,7 +59,11 @@ function HomeWelcome() {
         {matches && (
           <Box>
             <ImageContain></ImageContain>
-            <ColorBarImageUI />
+            <ColorBarImage>
+              <span></span>
+              <span></span>
+              <span></span>
+            </ColorBarImage>
           </Box>
         )}
       </Container>
@@ -73,7 +76,11 @@ function HomeWelcome() {
             src={WelcomeDoc}
             alt=""
           />
-          <ColorBarImageUI />
+          <ColorBarImage>
+            <span></span>
+            <span></span>
+            <span></span>
+          </ColorBarImage>
         </>
       )}
       {/* */}
