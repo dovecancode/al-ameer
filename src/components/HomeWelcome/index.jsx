@@ -4,8 +4,9 @@ import { FaArrowRight } from 'react-icons/fa6'
 import { Link as ReactRouterLink } from 'react-router-dom'
 // import { WelcomeDoc } from '../../assets/img/home'
 import { WelcomeDoc } from '../../assets/img/home'
+import ColorBarImageUI from '../shared/ColorBarImage'
 import SectionHeader from '../shared/SectionHeader'
-import { ColorBarImage, ImageContain, WelcomeHomeSection } from './style'
+import { ImageContain, WelcomeHomeSection } from './style'
 
 function HomeWelcome() {
   const theme = useTheme()
@@ -59,11 +60,7 @@ function HomeWelcome() {
         {matches && (
           <Box>
             <ImageContain></ImageContain>
-            <ColorBarImage>
-              <span></span>
-              <span></span>
-              <span></span>
-            </ColorBarImage>
+            <ColorBarImageUI />
           </Box>
         )}
       </Container>
@@ -76,11 +73,7 @@ function HomeWelcome() {
             src={WelcomeDoc}
             alt=""
           />
-          <ColorBarImage>
-            <span></span>
-            <span></span>
-            <span></span>
-          </ColorBarImage>
+          <ColorBarImageUI />
         </>
       )}
       {/* */}
