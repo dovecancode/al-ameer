@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material'
 import { styled } from '@mui/system'
 
-export const OptionContent = styled(Stack)(({ theme }) => ({
+export const OptionContent = styled(Stack)(() => ({
   flex: 5,
   gap: '2rem',
 
@@ -9,11 +9,11 @@ export const OptionContent = styled(Stack)(({ theme }) => ({
     paddingBlock: '2rem',
   },
 }))
-export const ContentArea = styled(Box)(({ theme }) => ({
+export const ContentArea = styled(Box)(() => ({
   flex: 1,
 }))
 
-export const ImageArea = styled(Stack)(({ theme }) => ({
+export const ImageArea = styled(Stack)(() => ({
   flex: 0.6,
   gap: '1.6rem',
 }))
