@@ -1,7 +1,7 @@
 import { Box, Stack } from '@mui/material'
 import { styled } from '@mui/system'
 
-export const OptionContainer = styled(Stack)(({ theme }) => ({
+export const OptionContainer = styled(Stack)(() => ({
   flex: 1,
   border: '1px solid  #c4c7d3',
   borderRadius: '0.3125rem',
