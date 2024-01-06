@@ -1,27 +1,36 @@
+import PropTypes from 'prop-types'
+import servicesOptionIcons from './data'
 import { OptionContainer, OptionIcons } from './style'
 
 import { Box, Button, Typography } from '@mui/material'
-import servicesOptionIcons from './data.js'
 
-console.log(servicesOptionIcons)
-
-function ServicesIconOptions() {
+function ServicesIconOptions({ onSelectItem, selectedID }) {
   return (
     <OptionContainer>
       <Box
-        className="container-icon"
-        sx={{ display: 'flex', flexWrap: 'wrap' }}
+        sx={{
+          border: '1px solid  #c4c7d3',
+          borderRadius: '0.3125rem',
+        }}
       >
-        {servicesOptionIcons.map((option) => (
-          <OptionIcons key={option.text}>
-            <Box>
-              <option.icon />
-            </Box>
-            <Typography component="p">{option.text}</Typography>
-          </OptionIcons>
-        ))}
+        <Box
+          className="container-icon"
+          sx={{ display: 'flex', flexWrap: 'wrap' }}
+        >
+          {servicesOptionIcons.map((option, idx) => (
+            <OptionIcons
+              isActive={idx + 1 === selectedID}
+              key={option.text}
+              onClick={() => onSelectItem(idx + 1)}
+            >
+              <Box>
+                <option.icon />
+              </Box>
+              <Typography component="p">{option.text}</Typography>
+            </OptionIcons>
+          ))}
+        </Box>
       </Box>
-
       <Button
         sx={{
           borderTopRightRadius: 0,
@@ -36,6 +45,11 @@ function ServicesIconOptions() {
       </Button>
     </OptionContainer>
   )
+}
+
+ServicesIconOptions.propTypes = {
+  onSelectItem: PropTypes.func,
+  selectedID: PropTypes.number,
 }
 
 export default ServicesIconOptions
