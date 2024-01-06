@@ -1,18 +1,23 @@
-import { Box, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import { styled } from '@mui/system'
 
 export const OptionContainer = styled(Stack)(() => ({
   flex: 1,
-  border: '1px solid  #c4c7d3',
-  borderRadius: '0.3125rem',
 }))
 
-export const OptionIcons = styled(Box)(({ theme }) => ({
+export const OptionIcons = styled('div')(({ theme, isActive }) => ({
+  backgroundColor: isActive ? theme.palette.primary.main : '',
+  color: isActive ? theme.palette.accent.main : '',
   textAlign: 'center',
   padding: '3rem',
   cursor: 'pointer',
-
+  transition: '0.5s',
+  borderRadius: '0.3125rem',
   flex: 1,
+
+  '& svg': {
+    fill: isActive ? theme.palette.accent.main : '',
+  },
 
   // '@media (width <= 40em)': {
   //   flexBasis: '10rem',
