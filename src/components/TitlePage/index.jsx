@@ -1,8 +1,9 @@
-import { Box, Container, Typography } from '@mui/material';
-import { SubHead } from './style';
-import { ColorBarImage } from '../HomeWelcome/style';
-import LinkMap from '../shared/LinkMap';
-import PropTypes from 'prop-types';
+import { Box, Container, Typography } from '@mui/material'
+import { SubHead } from './style'
+
+import PropTypes from 'prop-types'
+import ColorBarImageUI from '../shared/ColorBarImageUI'
+import LinkMap from '../shared/LinkMap'
 
 function TitlePage({ pageTitle, bgimage }) {
   return (
@@ -17,18 +18,14 @@ function TitlePage({ pageTitle, bgimage }) {
           </Container>
         </Box>
       </SubHead>
-      <ColorBarImage>
-        <span></span>
-        <span></span>
-        <span></span>
-      </ColorBarImage>
+      <ColorBarImageUI />
     </>
-  );
+  )
 }
 
 TitlePage.propTypes = {
   pageTitle: PropTypes.string,
   bgimage: PropTypes.string,
-};
+}
 
-export default TitlePage;
+export default TitlePage
