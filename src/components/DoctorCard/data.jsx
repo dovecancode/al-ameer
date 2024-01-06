@@ -1,7 +1,12 @@
+import doctor1 from '../../assets/img/doctorImg/doctor1.jpg';
+import doctor2 from '../../assets/img/doctorImg/doctor2.jpg';
+import doctor3 from '../../assets/img/doctorImg/doctor3.jpg';
+
+
 export const doctorInfo = [
   {
     id: 1,
-    image: '../src/assets/img/doctorImg/doctor1.jpg',
+    image: doctor1,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -10,7 +15,7 @@ export const doctorInfo = [
   },
   {
     id: 2,
-    image: '../src/assets/img/doctorImg/doctor2.jpg',
+    image: doctor2,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkedinLink: '',
@@ -19,7 +24,7 @@ export const doctorInfo = [
   },
   {
     id: 3,
-    image: '../src/assets/img/doctorImg/doctor3.jpg',
+    image: doctor3,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -28,7 +33,7 @@ export const doctorInfo = [
   },
   {
     id: 4,
-    image: '../src/assets/img/doctorImg/doctor1.jpg',
+    image: doctor1,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -37,7 +42,7 @@ export const doctorInfo = [
   },
   {
     id: 5,
-    image: '../src/assets/img/doctorImg/doctor2.jpg',
+    image: doctor2,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -46,7 +51,7 @@ export const doctorInfo = [
   },
   {
     id: 6,
-    image: '../src/assets/img/doctorImg/doctor3.jpg',
+    image: doctor3,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -55,7 +60,7 @@ export const doctorInfo = [
   },
   {
     id: 7,
-    image: '../src/assets/img/doctorImg/doctor1.jpg',
+    image: doctor1,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -64,7 +69,7 @@ export const doctorInfo = [
   },
   {
     id: 8,
-    image: '../src/assets/img/doctorImg/doctor2.jpg',
+    image: doctor2,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
@@ -73,7 +78,7 @@ export const doctorInfo = [
   },
   {
     id: 9,
-    image: '../src/assets/img/doctorImg/doctor3.jpg',
+    image: doctor3,
     name: "Doctor's Name",
     specialist: 'Neurology',
     linkinLink: '',
