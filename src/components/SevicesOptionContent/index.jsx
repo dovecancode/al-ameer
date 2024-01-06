@@ -6,9 +6,9 @@ import ListStyleInside from '../shared/ListStyleInside'
 
 import { featured1, featured2 } from '../../assets/img/home'
 
-import ColorBarImage from '../shared/ColorBarImage'
+import ColorBarImage from '../shared/ColorBarImageUI'
 
-function SevicesOptionContent({ title, bulletContent, content, images }) {
+function SevicesOptionContent({ title, bulletContent, content }) {
   return (
     <OptionContent direction={{ md: 'row', lg: 'row' }}>
       <ContentArea>

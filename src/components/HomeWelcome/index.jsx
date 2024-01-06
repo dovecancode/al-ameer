@@ -2,9 +2,9 @@ import { Box, Container, Link, Typography, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { FaArrowRight } from 'react-icons/fa6'
 import { Link as ReactRouterLink } from 'react-router-dom'
-// import { WelcomeDoc } from '../../assets/img/home'
+
 import { WelcomeDoc } from '../../assets/img/home'
-import ColorBarImageUI from '../shared/ColorBarImage'
+import ColorBarImageUI from '../shared/ColorBarImageUI'
 import SectionHeader from '../shared/SectionHeader'
 import { ImageContain, WelcomeHomeSection } from './style'
 
