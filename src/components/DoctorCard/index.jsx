@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Box, Typography, CardContent, Card, Container } from '@mui/material';
+import { Box, Typography, CardContent, Card } from '@mui/material';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { FaFacebookF } from 'react-icons/fa';
 import { FiInstagram } from 'react-icons/fi';
 import { doctorInfo } from './data';
+import {
+  ViewProfileContainer,
+  ViewProfileContent,
+  CardContainer,
+  CardHolder,
+} from './style';
 
 const SocialMediaBox = ({ backgroundColor, iconComponent, link }) => {
   const marginRight =
@@ -42,21 +48,8 @@ SocialMediaBox.propTypes = {
 
 export default function DoctorCard() {
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        minHeight: '100vh',
-      }}
-    >
-      <Container
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(3, 1fr)',
-          gap: '3rem',
-        }}
-      >
+    <CardContainer>
+      <CardHolder>
         {doctorInfo.map(
           ({
             id,
@@ -74,11 +67,17 @@ export default function DoctorCard() {
                 title={name}
                 sx={{ width: '100%' }}
               />
-              <Box sx={{textAlign: 'center', paddingTop: '1rem'}}>
-                <Typography component="body1" sx={{ fontSize: '1.8rem', color: '#1F2B6C' }}>
+              <Box sx={{ textAlign: 'center', paddingTop: '1rem' }}>
+                <Typography
+                  variant="body1"
+                  sx={{ fontSize: '1.8rem', color: '#1F2B6C' }}
+                >
                   {name}
                 </Typography>
-                <Typography variant="h5" sx={{fontSize: '1.8rem', letterSpacing: '.28rem'}}>
+                <Typography
+                  variant="h5"
+                  sx={{ fontSize: '1.8rem', letterSpacing: '.28rem' }}
+                >
                   {specialist}
                 </Typography>
               </Box>
@@ -104,32 +103,15 @@ export default function DoctorCard() {
                   link={instaLink}
                 />
               </CardContent>
-              <Box
-                sx={{
-                  backgroundColor: '#1F2B6C',
-                  height: '4.6rem',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  textAlign: 'center',
-                }}
-              >
-                <Box
-                  component="a"
-                  href=""
-                  sx={{
-                    color: '#BFD2F8',
-                    fontSize: '1.6rem',
-                    marginTop: '1rem',
-                    fontFamily: "'Work Sans', sans-serif",
-                  }}
-                >
+              <ViewProfileContainer>
+                <ViewProfileContent component="a" href="">
                   View Profile
-                </Box>
-              </Box>
+                </ViewProfileContent>
+              </ViewProfileContainer>
             </Card>
           )
         )}
-      </Container>
-    </Box>
+      </CardHolder>
+    </CardContainer>
   );
 }
