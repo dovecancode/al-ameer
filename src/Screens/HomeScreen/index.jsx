@@ -12,6 +12,7 @@ function HomeScreen() {
       <HomeWelcome />
       <HomeServices />
       <HomeSpecialties />
+      <HomeServices />
       <HomeBookApptForm />
       <ContactSectionNode />
     </>
