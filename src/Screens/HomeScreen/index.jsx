@@ -1,5 +1,6 @@
 import Hero from '../../components/Hero'
 import HomeBookApptForm from '../../components/HomeBookApptForm'
+import HomeNews from '../../components/HomeNews'
 import HomeServices from '../../components/HomeServices'
 import HomeSpecialties from '../../components/HomeSpecialties'
 import HomeWelcome from '../../components/HomeWelcome'
@@ -13,6 +14,7 @@ function HomeScreen() {
       <HomeServices />
       <HomeSpecialties />
       <HomeBookApptForm />
+      <HomeNews />
       <ContactSectionNode />
     </>
   )

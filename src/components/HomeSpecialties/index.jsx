@@ -1,14 +1,14 @@
 import { Box, Container, Stack, Typography } from '@mui/material'
 
 import SectionHeader from '../shared/SectionHeader'
-import { Item, SpeciaTiesSection } from './style'
+import { Item, SpeciatiesSection } from './style'
 
 import { AlHeartIcon } from '../shared/Icons'
 import specialties from './data'
 
 function HomeSpecialties() {
   return (
-    <SpeciaTiesSection>
+    <SpeciatiesSection>
       <Container>
         <SectionHeader
           position="center"
@@ -40,7 +40,7 @@ function HomeSpecialties() {
           })}
         </Stack>
       </Container>
-    </SpeciaTiesSection>
+    </SpeciatiesSection>
   )
 }
 
