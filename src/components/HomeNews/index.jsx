@@ -17,8 +17,6 @@ import { Pagination } from 'swiper/modules'
 import ArticleCard from '../ArticleCard'
 
 function HomeNews() {
-  const swiperSlideColumn = Array.from({ length: 3 }, (_, i) => i)
-
   return (
     <HomeNewSection>
       <Container>
@@ -36,7 +34,7 @@ function HomeNews() {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {swiperSlideColumn.map((_, colidx) => (
+          {newsArticles.map((articles, colidx) => (
             <SwiperSlide key={`col-${colidx}`}>
               <AricleCardContainer
                 className="article-container"
@@ -44,24 +42,10 @@ function HomeNews() {
                 flexWrap="wrap"
                 gap={3}
               >
-                {newsArticles.slice(0, 4).map((article, idx) => (
-                  <ArticleCard key={`article-${idx}`} article={article} />
-                ))}
+                <ArticleCard articlesSet={articles} />
               </AricleCardContainer>
             </SwiperSlide>
           ))}
-
-          {/* {newsArticles.map((articles, idx) => (
-            <AricleCardContainer
-              key={`article-${idx}`}
-              className="article-container"
-              direction={{ md: 'row', lg: 'row' }}
-              flexWrap="wrap"
-              gap={3}
-            >
-              <ArticleCard {...articles} />
-            </AricleCardContainer>
-          ))} */}
         </Swiper>
       </Container>
     </HomeNewSection>
