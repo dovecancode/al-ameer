@@ -37,3 +37,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.swiper-wrapper {
+  padding-bottom: 4rem;
+}
