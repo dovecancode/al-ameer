@@ -1,7 +1,7 @@
 import { Box } from '@mui/material'
 import { styled } from '@mui/system'
 
-export const SpeciaTiesSection = styled('section')({
+export const SpeciatiesSection = styled('section')({
   textAlign: 'center',
 })
 
