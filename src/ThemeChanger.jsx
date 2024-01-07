@@ -42,6 +42,11 @@ const theme = createTheme({
       textTransform: 'uppercase',
       color: '#159EEC',
     },
+    articleDate: {
+      fontFamily: "'Work Sans', sans-serif",
+      fontSize: 'clamp(1.6rem, 4vw, 1.8rem)',
+      color: '#159EEC',
+    },
     subtitle2: {
       fontFamily: "'Work Sans', sans-serif",
       fontSize: 'clamp(1.6rem, 4vw, 2rem)',
