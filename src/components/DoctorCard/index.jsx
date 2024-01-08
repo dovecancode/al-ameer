@@ -12,9 +12,6 @@ import {
 } from './style.jsx';
 
 function DoctorCard({ doctorData }) {
-  if (!doctorData) {
-    return null;
-  }
   const { doctorGroup: doctors } = doctorData;
   return (
     <CardContainer>
