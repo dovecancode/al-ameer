@@ -1,45 +1,37 @@
 import { Box, Link, Stack, TextField, Typography } from '@mui/material'
 import { styled } from '@mui/system'
 
-export const FooterSection = styled('footer')(() => ({
+export const FooterSection = styled('footer')(({ theme }) => ({
   background: '#1F2B6C',
-  paddingTop: '3rem',
+  paddingTop: theme.spacing(3),
 }))
 
-export const FooterTop = styled(Stack)(({ theme }) => ({
+export const FooterTop = styled(Stack)(() => ({
   flexWrap: 'wrap',
   gap: 3,
 }))
 
-export const FooterHeading = styled(Typography)(({ theme }) => ({
+export const FooterHeading = styled(Typography)(() => ({
   fontWeight: 'bold',
 }))
 
 export const Item = styled('div')(({ theme }) => ({
   padding: theme.spacing(2),
-  // marginBottom: theme.spacing(2),
+
   color: '#fff',
   display: 'flex',
   flexDirection: 'column',
   gap: '2rem',
 
   flex: 1,
-
-  // '@media (width >= 40em )': {
-  //   flex: '1 1 calc(100% / 2 - 5rem)',
-  // },
-
-  // '@media(width >= 60rem)': {
-  //   flex: '1 1 calc(100% / 2 - 5rem)',
-  // },
-
-  // flex: '1 1 calc(100% / 4 - 2rem)',
+  alignItems: 'baseline',
 
   '@media(width <= 80rem)': {
     flex: '1 1 calc(100% / 2 - 5rem)',
   },
 
   '@media(width >= 80rem)': {
+    alignItems: 'stretch',
     '&:nth-of-type(3)': {
       flex: 1.5,
     },
@@ -61,13 +53,11 @@ export const Footerlink = styled(Link)(({ theme }) => ({
   },
 }))
 
-export const NewSTextField = styled(TextField)(({ theme }) => ({
+export const NewsTextField = styled(TextField)(({ theme }) => ({
   width: '100%',
-  '.MuiInputBase-input': {
-    background: theme.palette.accent.main,
-    borderRadius: '0.5rem',
-    color: theme.palette.primary.main,
-  },
+  background: theme.palette.accent.main,
+  borderRadius: '0.5rem',
+  color: theme.palette.primary.main,
 }))
 
 export const FooterBootom = styled(Stack)(({ theme }) => ({

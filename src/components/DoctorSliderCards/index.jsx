@@ -1,11 +1,11 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
-import { Container } from '@mui/material';
-import DoctorCard from '../DoctorCard';
-import SectionHeader from '../../components/shared/SectionHeader';
-import { doctorInfo } from './data';
-import 'swiper/css';
-import 'swiper/css/pagination';
+import { Container } from '@mui/material'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import { Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import SectionHeader from '../../components/shared/SectionHeader'
+import DoctorCard from '../DoctorCard'
+import { doctorInfo } from './data'
 
 function DoctorSliderCard() {
   return (
@@ -33,7 +33,7 @@ function DoctorSliderCard() {
         ))}
       </Swiper>
     </>
-  );
+  )
 }
 
-export default DoctorSliderCard;
+export default DoctorSliderCard

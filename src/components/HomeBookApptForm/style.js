@@ -13,7 +13,6 @@ export const AppointmentSection = styled('section')({
 })
 
 export const Content = styled('div')({
-  // marginBottom: '3rem',
   '& h2': {
     color: '#159EEC',
   },
