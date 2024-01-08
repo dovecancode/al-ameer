@@ -8,3 +8,7 @@ export const HomeNewSection = styled('section')(() => ({
 export const AricleCardContainer = styled(Stack)(() => ({
   marginBlock: '3rem',
 }))
+
+export const CustomPaginationBullet = styled('span')(() => ({
+  marginBlock: '3rem',
+}))
