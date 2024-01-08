@@ -39,5 +39,20 @@ body {
 }
 
 .swiper-wrapper {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
+}
+
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.swiper-pagination-bullet {
+  background: #bfd2f8;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1f2b6c;
 }

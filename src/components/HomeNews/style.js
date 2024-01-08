@@ -9,6 +9,9 @@ export const AricleCardContainer = styled(Stack)(() => ({
   marginBlock: '3rem',
 }))
 
-export const CustomPaginationBullet = styled('span')(() => ({
-  marginBlock: '3rem',
+export const CustomPaginationBullet = styled('div')(() => ({
+  // marginBlock: '3rem',
+  background: 'red',
+  width: 200,
+  height: 200,
 }))
