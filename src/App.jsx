@@ -1,24 +1,21 @@
 import { ThemeProvider } from '@mui/material'
 import { Outlet } from 'react-router-dom'
 import theme from './ThemeChanger'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <Header />
-        <Navbar />
-      </div>
+      <Header />
+      <Navbar />
 
       <main>
         <Outlet />
       </main>
 
-      <div>
-        <h2>Footer</h2>
-      </div>
+      <Footer />
     </ThemeProvider>
   )
 }
