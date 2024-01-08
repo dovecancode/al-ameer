@@ -1,11 +1,5 @@
-import DoctorSliderCard from '../../components/DoctorSliderCards';
-
 function ContactScreen() {
-  return (
-    <div>
-      <DoctorSliderCard />
-    </div>
-  );
+  return <div>ContactScreen</div>;
 }
 
 export default ContactScreen;

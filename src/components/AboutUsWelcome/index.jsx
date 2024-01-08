@@ -8,6 +8,7 @@ function AboutUsWelcome() {
   const isMobile = useMediaQuery('(max-width:425px)');
   const isTablet = useMediaQuery('(max-width:768px)');
   const isLaptop = useMediaQuery('(max-width:1024px)');
+  const isDesktop = useMediaQuery('(max-width:1440px)');
 
   return (
     <WelcomeAboutUsSection>
@@ -24,7 +25,13 @@ function AboutUsWelcome() {
             src={WelcomingStaff}
             alt="Welcoming Staff"
             sx={{
-              width: isMobile ? '30rem' : isLaptop ? '50rem' : 'auto',
+              width: isMobile
+                ? '30rem'
+                : isLaptop
+                ? '50rem'
+                : isDesktop
+                ? '60rem'
+                : 'auto',
               margin: isMobile ? '0 auto' : '0',
             }}
           />

@@ -38,11 +38,11 @@ export const Item = styled(Paper)(({ theme }) => ({
   //   flex: '1 0 40rem',
   // },
 
-  '@media(width >= 40rem)': {
+  '@media (width >= 40em )': {
     flex: '1 1 calc(100% / 2 - 5rem)',
   },
 
-  '@media(width >= 60rem)': {
+  '@media(width >= 80rem)': {
     flex: '1 1 calc(100% / 4 - 5rem)',
   },
 }))
