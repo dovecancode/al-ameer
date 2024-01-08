@@ -12,12 +12,13 @@ import {
   FooterTop,
   Footerlink,
   Item,
-  NewSTextField,
+  NewsTextField,
   SocialIcon,
 } from './style'
 
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa'
 import { GrInstagram } from 'react-icons/gr'
+
 import { IoIosSend } from 'react-icons/io'
 
 function Footer() {
@@ -68,22 +69,20 @@ function Footer() {
             <Item>
               <FooterHeading component="h3">Newsletter</FooterHeading>
               <Box>
-                <NewSTextField
-                  id="outlined-basic"
-                  label="Enter your email address"
+                <NewsTextField
                   variant="filled"
-                  InputLabelProps={{
-                    style: { color: '#1F2B6C' },
-                  }}
+                  label="Enter your email address..."
+                  id="outlined-start-adornment"
+                  sx={{ m: 1, width: '100%' }}
                   InputProps={{
-                    style: {
-                      color: '#fff',
-                    },
                     endAdornment: (
-                      <InputAdornment position="end" sx={{ background: 'red' }}>
-                        <IoIosSend />
+                      <InputAdornment position="end">
+                        <IoIosSend color="#1F2B6C" size={30} />
                       </InputAdornment>
                     ),
+                  }}
+                  InputLabelProps={{
+                    style: { color: '#1F2B6C' },
                   }}
                 />
               </Box>

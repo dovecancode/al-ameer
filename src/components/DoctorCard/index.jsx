@@ -1,18 +1,18 @@
-import PropTypes from 'prop-types';
-import { Box, Typography, CardContent, Card } from '@mui/material';
-import { FaLinkedinIn } from 'react-icons/fa6';
-import { FaFacebookF } from 'react-icons/fa';
-import { FiInstagram } from 'react-icons/fi';
+import { Box, Card, CardContent, Typography } from '@mui/material'
+import PropTypes from 'prop-types'
+import { FaFacebookF } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa6'
+import { FiInstagram } from 'react-icons/fi'
 import {
+  CardContainer,
+  CardHolder,
   SocialMediaBox,
   ViewProfileContainer,
   ViewProfileContent,
-  CardContainer,
-  CardHolder,
-} from './style.jsx';
+} from './style.jsx'
 
 function DoctorCard({ doctorData }) {
-  const { doctorGroup: doctors } = doctorData;
+  const { doctorGroup: doctors } = doctorData
   return (
     <CardContainer>
       <CardHolder>
@@ -72,11 +72,11 @@ function DoctorCard({ doctorData }) {
         ))}
       </CardHolder>
     </CardContainer>
-  );
+  )
 }
 
 DoctorCard.propTypes = {
   doctorData: PropTypes.object,
-};
+}
 
-export default DoctorCard;
+export default DoctorCard
