@@ -5,7 +5,10 @@ import { AricleCardContainer, HomeNewSection } from './style'
 import SectionHeader from '../../components/shared/SectionHeader'
 
 // Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react'
+import {
+  SwiperSlide as ArticleSlide,
+  Swiper as ArticleSwiper,
+} from 'swiper/react'
 
 import 'swiper/css'
 import 'swiper/css/pagination'
@@ -26,8 +29,8 @@ function HomeNews() {
           headingText="News"
           position="center"
         />
-        <Swiper
-          spaceBetween={30}
+        <ArticleSwiper
+          spaceBetween={1}
           pagination={{
             clickable: true,
           }}
@@ -35,7 +38,7 @@ function HomeNews() {
           className="mySwiper"
         >
           {newsArticles.map((articles, idx) => (
-            <SwiperSlide key={`col-${idx}`}>
+            <ArticleSlide key={`col-${idx}`}>
               <AricleCardContainer
                 className="article-container"
                 direction={{ md: 'row', lg: 'row' }}
@@ -44,9 +47,9 @@ function HomeNews() {
               >
                 <ArticleCard articlesSet={articles} />
               </AricleCardContainer>
-            </SwiperSlide>
+            </ArticleSlide>
           ))}
-        </Swiper>
+        </ArticleSwiper>
       </Container>
     </HomeNewSection>
   )
