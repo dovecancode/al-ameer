@@ -34,8 +34,8 @@ function HomeNews() {
           modules={[Pagination]}
           className="mySwiper"
         >
-          {newsArticles.map((articles, colidx) => (
-            <SwiperSlide key={`col-${colidx}`}>
+          {newsArticles.map((articles, idx) => (
+            <SwiperSlide key={`col-${idx}`}>
               <AricleCardContainer
                 className="article-container"
                 direction={{ md: 'row', lg: 'row' }}

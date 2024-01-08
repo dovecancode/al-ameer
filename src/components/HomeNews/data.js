@@ -16,6 +16,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T22:57:57Z',
         content:
           'Summary: A study of 42 runners reveals that using cannabis before exercise can boost mood and enjoyment. The study shows that both THC and CBD can enhance exercise experience, with CBD even outperfor',
+        views: 250,
+        likes: 500,
       },
       {
         id: 2,
@@ -33,6 +35,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T13:00:00Z',
         content:
           'Is your gut leaking? This is probably not a question you get asked often. After all, youre not a faucet or a pipe. But similar to a leaking pipe, the lining in your gut can become damaged, allowing s… [+7348 chars]',
+        views: 196,
+        likes: 425,
       },
       {
         id: 3,
@@ -49,6 +53,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T20:15:49Z',
         content:
           'For years now, the potential benefits of psychoactive drugs have been slowly moving from hippie nonsense to science-backed research. From magic mushrooms to psychedelic toad milk, it seems ever clear… [+4727 chars]',
+        views: 21,
+        likes: 36,
       },
       {
         id: 4,
@@ -66,6 +72,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T20:02:52Z',
         content:
           'A study published in the International Journal of Molecular Sciences has uncovered startling effects of microplastics on mice, revealing significant behavioral changes and immune responses in both yo… [+3744 chars]',
+        views: 63,
+        likes: 42,
       },
     ],
   },
@@ -87,6 +95,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T20:01:00Z',
         content:
           'Scientists in Switzerland have announced the discovery of a new class of antibiotics shown to be effective against deadly, drug-resistant bacteria.\r\nThe antibiotic, called zosurabalpin, works by bloc… [+5055 chars]',
+        views: 692,
+        likes: 532,
       },
       {
         id: 6,
@@ -104,6 +114,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T19:11:00Z',
         content:
           'Researchers at the Amsterdam University Medical Center have made a significant discovery regarding the persistent fatigue experienced by long Covid patients. \r\nThe experts have identified a biologica… [+4024 chars]',
+        views: 652,
+        likes: 92,
       },
       {
         id: 7,
@@ -121,6 +133,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T16:35:00Z',
         content:
           'ALBANY, Ga. (WALB) - Flu activity is widespread throughout the state, and the current flu report lists flu activity at the highest level.\r\nKathleen E. Toomey, M.D., M.P.H., DPH commissioner says, It … [+2267 chars]',
+        views: 362,
+        likes: 32,
       },
 
       {
@@ -139,6 +153,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T14:55:53Z',
         content:
           '(Stacker) - An estimated 110,900 people in Wisconsin over age 65 have Alzheimers, according to estimates released by the Alzheimers Association in 2023.\r\nAlzheimers disease afflicts an estimated 6.7 … [+17787 chars]',
+        views: 69,
+        likes: 235,
       },
     ],
   },
@@ -159,6 +175,8 @@ const newsArticles = [
         publishedAt: '2024-01-07T11:00:00Z',
         content:
           'Skip to content\r\nCases of three major respiratory viruses — the flu, COVID-19 and RSV — are surging in the U.S., pushing the country toward a feared “tripledemic” during its first post-pandemic respi… [+5742 chars]',
+        views: 500,
+        likes: 63,
       },
       {
         id: 10,
@@ -176,6 +194,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T14:00:01Z',
         content:
           '1. Eat more whole foods\r\n"Well, first of all, focus on whole and minimally processed foods, especially plant foods," says Hu. Aim to incorporate more whole foods, like fruits, vegetables, whole grain… [+3017 chars]',
+        views: 60,
+        likes: 10,
       },
       {
         id: 11,
@@ -191,14 +211,15 @@ const newsArticles = [
         publishedAt: '2024-01-06T14:00:00Z',
         content:
           'By Annabel BourneFeatures correspondent\r\nWhen is the best time to exercise?\r\nThere is growing evidence that the time of day we exercise makes a difference to our performance and health, but can we tr… [+7463 chars]',
+        views: 359,
+        likes: 59,
       },
       {
         id: 12,
         source: {
           name: 'Financial Times',
         },
-        author:
-          'Sarah White, Guy Chazan, Barney Jopson, Andy Bounds, Giuliana Ricozzi',
+        author: 'Sarah White',
         title:
           "Europe battles 'tridemic' of respiratory illnesses - Financial Times",
         description:
@@ -209,6 +230,8 @@ const newsArticles = [
         publishedAt: '2024-01-06T13:00:55Z',
         content:
           'Europe is facing a tridemic that threatens to push health systems to the limit as a surge in flu cases is compounded by Covid-19 and other respiratory illnesses.\r\nSpain and Italy are among the countr… [+5392 chars]',
+        views: 94,
+        likes: 12,
       },
     ],
   },
