@@ -28,6 +28,10 @@ const theme = createTheme({
       fontWeight: '400',
       color: '#1F2B6C',
     },
+    h3: {
+      fontFamily: "'Work Sans', sans-serif",
+      fontSize: 'clamp(1.6rem, 4vw, 2rem)',
+    },
     h5: {
       fontFamily: "'Work Sans', sans-serif",
       fontSize: '1.6rem',
