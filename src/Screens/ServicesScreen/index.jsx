@@ -1,5 +1,14 @@
+import Footer from "../../components/Footer";
+import PageHeader from "../../components/PageHeader";
+
 function ServicesScreen() {
-  return <div>ServicesScreen</div>
+  return (
+    <div>
+      <PageHeader />
+      ServicesScreen
+      <Footer />
+    </div>
+  );
 }
 
-export default ServicesScreen
+export default ServicesScreen;

@@ -1,5 +1,5 @@
-import { ThemeProvider } from '@mui/material'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ThemeProvider } from "@mui/material";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   AboutScreen,
   AppointmentScreen,
@@ -8,23 +8,23 @@ import {
   HomeScreen,
   NewsScreen,
   ServicesScreen,
-} from './Screens'
-import theme from './ThemeChanger'
+} from "./Screens";
+import theme from "./ThemeChanger";
 // import Footer from './components/Footer'
-import DashboardLayout from './DashboardLayout'
-import { Dashboard } from './Screens/DashboardScreens'
-import DashboardPrivateRoute from './components/DashboardPrivateRoute'
+import DashboardLayout from "./DashboardLayout";
+import { Dashboard } from "./Screens/DashboardScreens";
+import DashboardPrivateRoute from "./components/DashboardPrivateRoute";
 
-import Footer from './components/Footer'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
+// import Footer from './components/Footer'
+// import Header from './components/Header'
+// import Navbar from './components/Navbar'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header />
-        <Navbar />
+        {/* <Header />
+        <Navbar /> */}
         <Routes>
           <Route index="*" element={<HomeScreen />} />
           <Route path="about-us" element={<AboutScreen />} />
@@ -45,10 +45,10 @@ function App() {
             <Route index element={<Dashboard />} />
           </Route>
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
