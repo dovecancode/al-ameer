@@ -6,12 +6,12 @@ export const FooterSection = styled('footer')(() => ({
   paddingTop: '3rem',
 }))
 
-export const FooterTop = styled(Stack)(({}) => ({
+export const FooterTop = styled(Stack)(() => ({
   flexWrap: 'wrap',
   gap: 3,
 }))
 
-export const FooterHeading = styled(Typography)(({}) => ({
+export const FooterHeading = styled(Typography)(() => ({
   fontWeight: 'bold',
 }))
 
