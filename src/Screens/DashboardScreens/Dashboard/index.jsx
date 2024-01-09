@@ -1,9 +1,11 @@
-import { Box } from '@mui/material'
+import { Box } from "@mui/material";
 
 function Dashboard() {
   return (
-    <Box sx={{ background: 'cyan', padding: '1rem' }}>Dashboard Content</Box>
-  )
+    <>
+      <Box sx={{ background: "cyan", padding: "1rem" }}>Dashboard Content</Box>
+    </>
+  );
 }
 
-export default Dashboard
+export default Dashboard;
