@@ -1,5 +1,5 @@
-import Footer from "../../components/Footer/Index";
-import PageHeader from "../../components/PageHeader/Index";
+import Footer from "../../components/Footer";
+import PageHeader from "../../components/PageHeader";
 
 function ServicesScreen() {
   return (

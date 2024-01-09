@@ -4,8 +4,8 @@ import DoctorSliderCards from "../../components/DoctorSliderCards";
 import HomeNews from "../../components/HomeNews";
 import ContactSectionNode from "../../components/shared/ContactSectionNode";
 import AboutUsTestimonial from "../../components/AboutUsTestimonial";
-import PageHeader from "../../components/PageHeader/Index";
-import Footer from "../../components/Footer/Index";
+import PageHeader from "../../components/PageHeader";
+import Footer from "../../components/Footer";
 
 function AboutScreen() {
   return (

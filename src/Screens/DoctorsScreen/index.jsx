@@ -1,5 +1,5 @@
-import PageHeader from "../../components/PageHeader/Index";
-import Footer from "../../components/Footer/Index";
+import PageHeader from "../../components/PageHeader";
+import Footer from "../../components/Footer";
 
 function DoctorsScreen() {
   return (
