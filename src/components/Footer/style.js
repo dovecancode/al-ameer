@@ -6,12 +6,12 @@ export const FooterSection = styled('footer')(() => ({
   paddingTop: '3rem',
 }))
 
-export const FooterTop = styled(Stack)(({ theme }) => ({
+export const FooterTop = styled(Stack)(({}) => ({
   flexWrap: 'wrap',
   gap: 3,
 }))
 
-export const FooterHeading = styled(Typography)(({ theme }) => ({
+export const FooterHeading = styled(Typography)(({}) => ({
   fontWeight: 'bold',
 }))
 
@@ -61,13 +61,11 @@ export const Footerlink = styled(Link)(({ theme }) => ({
   },
 }))
 
-export const NewSTextField = styled(TextField)(({ theme }) => ({
+export const NewsTextField = styled(TextField)(({ theme }) => ({
   width: '100%',
-  '.MuiInputBase-input': {
-    background: theme.palette.accent.main,
-    borderRadius: '0.5rem',
-    color: theme.palette.primary.main,
-  },
+  background: theme.palette.accent.main,
+  borderRadius: '0.5rem',
+  color: theme.palette.primary.main,
 }))
 
 export const FooterBootom = styled(Stack)(({ theme }) => ({
