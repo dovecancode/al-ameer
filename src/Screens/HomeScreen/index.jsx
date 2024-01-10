@@ -1,3 +1,4 @@
+import DoctorSliderCard from '../../components/DoctorSliderCards'
 import Hero from '../../components/Hero'
 import HomeBookApptForm from '../../components/HomeBookApptForm'
 import HomeNews from '../../components/HomeNews'
@@ -14,6 +15,7 @@ function HomeScreen() {
       <HomeServices />
       <HomeSpecialties />
       <HomeBookApptForm />
+      <DoctorSliderCard />
       <HomeNews />
       <ContactSectionNode />
     </>

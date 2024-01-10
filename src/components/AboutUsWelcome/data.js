@@ -5,4 +5,4 @@ export const items = [
   '5-Star Care',
   'Believe in Us',
   'A Legacy of Excellence',
-];
+]

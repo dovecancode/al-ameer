@@ -1,4 +1,4 @@
-import { Container } from '@mui/material';
+import { Container } from '@mui/material'
 import {
   TopMostContainer,
   TopMostLogo,
@@ -9,8 +9,8 @@ import {
   TopMostRight,
   TopMostText,
   TopMostInfo,
-} from './style.js';
-import { topMost } from './data.jsx';
+} from './Header.Element.js'
+import { topMost } from './data.jsx'
 
 function Header() {
   return (
@@ -33,12 +33,12 @@ function Header() {
                     </TopMostInfo>
                   </TopMostRight>
                 </TopMostRightContents>
-              );
+              )
             })}
           </TopMostRightContainer>
         </TopMostContainer>
       </Container>
     </>
-  );
+  )
 }
-export default Header;
+export default Header

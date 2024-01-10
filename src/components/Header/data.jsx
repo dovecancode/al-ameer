@@ -1,6 +1,6 @@
-import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import PhoneInTalkIcon from '@mui/icons-material/PhoneInTalk'
+import AccessTimeIcon from '@mui/icons-material/AccessTime'
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined'
 
 export const topMost = [
   {
@@ -29,4 +29,4 @@ export const topMost = [
     text: 'LOCATION',
     info: '0123 Some Place',
   },
-];
+]

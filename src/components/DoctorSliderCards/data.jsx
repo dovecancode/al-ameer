@@ -1,6 +1,6 @@
-import doctor1 from '../../assets/img/doctorImg/doctor1.jpg';
-import doctor2 from '../../assets/img/doctorImg/doctor2.jpg';
-import doctor3 from '../../assets/img/doctorImg/doctor3.jpg';
+import doctor1 from '../../assets/img/doctorImg/doctor1.jpg'
+import doctor2 from '../../assets/img/doctorImg/doctor2.jpg'
+import doctor3 from '../../assets/img/doctorImg/doctor3.jpg'
 
 export const doctorInfo = [
   {
@@ -96,4 +96,4 @@ export const doctorInfo = [
       },
     ],
   },
-];
+]
