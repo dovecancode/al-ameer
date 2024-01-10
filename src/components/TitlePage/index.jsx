@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
 import PropTypes from 'prop-types'
 import LinkMap from '../shared/LinkMap'
-import { SubHead } from './style'
+import { SubHead } from './TitlePage.Element'
 
 import ColorBarImageUI from '../shared/ColorBarImageUI'
 

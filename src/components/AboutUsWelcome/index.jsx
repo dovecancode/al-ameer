@@ -1,14 +1,14 @@
-import { Stack, Box, Typography, useMediaQuery } from '@mui/material';
-import { WelcomeAboutUsSection, CircleWithText } from './style';
-import SectionHeader from '../shared/SectionHeader';
-import WelcomingStaff from '../../assets/img/aboutus/welcome-staff.jpg';
-import { items } from './data.js';
+import { Stack, Box, Typography, useMediaQuery } from '@mui/material'
+import { WelcomeAboutUsSection, CircleWithText } from './AboutUsWelcome.Element'
+import SectionHeader from '../shared/SectionHeader'
+import WelcomingStaff from '../../assets/img/aboutus/welcome-staff.jpg'
+import { items } from './data.js'
 
 function AboutUsWelcome() {
-  const isMobile = useMediaQuery('(max-width:425px)');
-  const isTablet = useMediaQuery('(max-width:768px)');
-  const isLaptop = useMediaQuery('(max-width:1024px)');
-  const isDesktop = useMediaQuery('(max-width:1440px)');
+  const isMobile = useMediaQuery('(max-width:425px)')
+  const isTablet = useMediaQuery('(max-width:768px)')
+  const isLaptop = useMediaQuery('(max-width:1024px)')
+  const isDesktop = useMediaQuery('(max-width:1440px)')
 
   return (
     <WelcomeAboutUsSection>
@@ -83,6 +83,6 @@ function AboutUsWelcome() {
         </Box>
       </Stack>
     </WelcomeAboutUsSection>
-  );
+  )
 }
-export default AboutUsWelcome;
+export default AboutUsWelcome

@@ -1,5 +1,5 @@
-import { Stack } from '@mui/material';
-import styled from '@emotion/styled';
+import { Stack } from '@mui/material'
+import styled from '@emotion/styled'
 
 export const SubHead = styled(Stack)(({ bgimage }) => {
   return {
@@ -20,5 +20,5 @@ export const SubHead = styled(Stack)(({ bgimage }) => {
       backgroundPosition: 'center',
       zIndex: '-1',
     },
-  };
-});
+  }
+})
