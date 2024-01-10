@@ -10,6 +10,7 @@ function ServicesIconOptions({ onSelectItem, selectedID }) {
       <Box
         sx={{
           border: '1px solid  #c4c7d3',
+          borderBottom: 0,
           borderRadius: '0.3125rem',
         }}
       >

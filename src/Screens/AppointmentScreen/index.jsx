@@ -1,5 +1,14 @@
+import PageHeader from "../../components/PageHeader";
+import Footer from "../../components/Footer";
+
 function AppointmentScreen() {
-  return <div>AppointmentScreen</div>
+  return (
+    <div>
+      <PageHeader />
+      AppointmentScreen
+      <Footer />
+    </div>
+  );
 }
 
-export default AppointmentScreen
+export default AppointmentScreen;

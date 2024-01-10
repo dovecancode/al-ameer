@@ -16,6 +16,8 @@ import {
 } from './Screens'
 
 import App from './App'
+import DashboardPrivateRoute from './components/DashboardPrivateRoute'
+import { Dashboard } from './Screens/DashboardScreens'
 
 const Router = () => {
   const router = createBrowserRouter(
@@ -28,6 +30,11 @@ const Router = () => {
         <Route path="news" element={<NewsScreen />} />
         <Route path="contact" element={<ContactScreen />} />
         <Route path="appointment" element={<AppointmentScreen />} />
+
+        {/* dashboard route */}
+        <Route path="" element={<DashboardPrivateRoute />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
       </Route>
     )
   )
