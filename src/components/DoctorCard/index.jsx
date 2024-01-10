@@ -1,3 +1,4 @@
+import React from 'react'
 import { Box, Card, CardContent, Typography } from '@mui/material'
 import PropTypes from 'prop-types'
 import { FaFacebookF } from 'react-icons/fa'
@@ -6,12 +7,45 @@ import { FiInstagram } from 'react-icons/fi'
 import {
   CardContainer,
   CardHolder,
-  SocialMediaBox,
   ViewProfileContainer,
   ViewProfileContent,
-} from './style.jsx'
+} from './DoctorCard.Element'
 
 function DoctorCard({ doctorData }) {
+  const SocialMediaBox = ({ backgroundColor, iconComponent, link }) => {
+    const marginRight =
+      iconComponent.type === FaLinkedinIn || iconComponent.type === FaFacebookF
+        ? '3rem'
+        : '0'
+    return (
+      <Box
+        sx={{
+          backgroundColor: backgroundColor,
+          height: '4rem',
+          width: '4rem',
+          fontSize: '2rem',
+          borderRadius: '50%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          marginRight: marginRight,
+          cursor: 'pointer',
+        }}
+      >
+        {React.cloneElement(iconComponent, {
+          src: link,
+          style: { color: '#BFD2F8' },
+        })}
+      </Box>
+    )
+  }
+
+  SocialMediaBox.propTypes = {
+    backgroundColor: PropTypes.string,
+    iconComponent: PropTypes.element,
+    link: PropTypes.string,
+  }
+
   const { doctorGroup: doctors } = doctorData
   return (
     <CardContainer>

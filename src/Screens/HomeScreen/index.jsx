@@ -1,3 +1,4 @@
+import DoctorSliderCard from '../../components/DoctorSliderCards'
 import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import HomeBookApptForm from "../../components/HomeBookApptForm";
@@ -16,6 +17,7 @@ function HomeScreen() {
       <HomeServices />
       <HomeSpecialties />
       <HomeBookApptForm />
+      <DoctorSliderCard />
       <HomeNews />
       <ContactSectionNode />
       <Footer />
