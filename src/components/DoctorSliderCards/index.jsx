@@ -21,7 +21,6 @@ function DoctorSliderCard() {
           spaceBetween={1}
           pagination={{
             clickable: true,
-            el: '.custom-pagination',
           }}
           modules={[Pagination]}
           className="mySwiper"

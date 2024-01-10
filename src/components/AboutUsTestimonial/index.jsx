@@ -8,6 +8,9 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 function AboutUsTestimonial() {
+  const renderBullet = (index, className) => {
+    return `<span class="custom-pagination ${className}"></span>`
+  }
   return (
     <>
       <TestimonialBgColor>
@@ -17,8 +20,10 @@ function AboutUsTestimonial() {
               spaceBetween={1}
               pagination={{
                 clickable: true,
+                renderBullet: renderBullet,
               }}
               modules={[Pagination]}
+              className="mySwiper"
             >
               {reviews.map(({ id, reviewer, review }) => (
                 <SwiperSlide key={id}>

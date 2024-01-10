@@ -57,10 +57,10 @@ body {
   background: #1f2b6c;
 }
 
-.custom-pagination .swiper-pagination-bullet {
-  background-color: #FCFEFE !important;
+.custom-pagination.swiper-pagination-bullet {
+  background-color: #FCFEFE;
 }
 
-.custom-pagination .swiper-pagination-bullet-active {
-  background-color: #BFD2F8 !important;
+.custom-pagination.swiper-pagination-bullet-active {
+  background-color: #BFD2F8;
 }

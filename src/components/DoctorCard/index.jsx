@@ -1,14 +1,14 @@
 import React from 'react'
+import { Box, Card, CardContent, Typography } from '@mui/material'
 import PropTypes from 'prop-types'
-import { Box, Typography, CardContent, Card } from '@mui/material'
-import { FaLinkedinIn } from 'react-icons/fa6'
 import { FaFacebookF } from 'react-icons/fa'
+import { FaLinkedinIn } from 'react-icons/fa6'
 import { FiInstagram } from 'react-icons/fi'
 import {
-  ViewProfileContainer,
-  ViewProfileContent,
   CardContainer,
   CardHolder,
+  ViewProfileContainer,
+  ViewProfileContent,
 } from './DoctorCard.Element'
 
 function DoctorCard({ doctorData }) {
