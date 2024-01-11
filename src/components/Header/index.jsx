@@ -10,7 +10,7 @@ import {
   TopMostText,
   TopMostInfo,
 } from './Header.Element.js'
-import { topMost } from './data.jsx'
+import { topMost } from './data'
 
 function Header() {
   return (
