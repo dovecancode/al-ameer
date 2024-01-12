@@ -1,14 +1,11 @@
-import Footer from "../../components/Footer";
-import PageHeader from "../../components/PageHeader";
+import UnderConstractionUI from '../../components/UnderConstractionUI'
 
 function NewsScreen() {
   return (
     <div>
-      <PageHeader />
-      NewsScreen
-      <Footer />
+      <UnderConstractionUI />
     </div>
-  );
+  )
 }
 
-export default NewsScreen;
+export default NewsScreen

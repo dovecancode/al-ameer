@@ -1,14 +1,13 @@
 import { Container } from '@mui/material'
+import TopLogo from '../TopLogo/index.jsx'
 import {
   TopMostContainer,
-  TopMostLogo,
-  SpanWord,
+  TopMostIcon,
+  TopMostInfo,
+  TopMostRight,
   TopMostRightContainer,
   TopMostRightContents,
-  TopMostIcon,
-  TopMostRight,
   TopMostText,
-  TopMostInfo,
 } from './Header.Element.js'
 import { topMost } from './data'
 
@@ -17,10 +16,7 @@ function Header() {
     <>
       <Container>
         <TopMostContainer component="section">
-          <TopMostLogo variant="h1">
-            Al-
-            <SpanWord variant="span">Ameer</SpanWord>
-          </TopMostLogo>
+          <TopLogo logoDisplay="none" />
           <TopMostRightContainer>
             {topMost.map(({ id, icon, text, info }) => {
               return (
