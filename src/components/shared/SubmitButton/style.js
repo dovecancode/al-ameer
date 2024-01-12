@@ -1,14 +1,24 @@
 import styled from '@emotion/styled'
 import { Button } from '@mui/material'
 
-export const FormButton = styled(Button)(({ theme }) => ({
-  width: '100%',
-  fontSize: '1.6rem',
-  color: theme.palette.primary.main,
-  background: theme.palette.accent.main,
-  fontFamily: "'Work Sans', sans-serif",
-  '&:hover': {
-    color: '#fff',
-    background: theme.palette.secondary.main,
-  },
-}))
+export const FormButton = styled(Button)(
+  ({
+    width = '100%',
+    height = '100%',
+    backgroundnonhover = '#bfd2f8',
+    colornonhover = '#1f2b6c',
+    colorhover = '#fff',
+    backgroundhover = '#159eec',
+  }) => ({
+    height,
+    width,
+    fontSize: '1.6rem',
+    color: colornonhover,
+    background: backgroundnonhover,
+    fontFamily: "'Work Sans', sans-serif",
+    '&:hover': {
+      color: colorhover,
+      background: backgroundhover,
+    },
+  })
+)

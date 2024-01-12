@@ -8,16 +8,6 @@ export const TopMostContainer = styled(Box)(({ theme }) => ({
   margin: theme.spacing(3, 0),
 }))
 
-export const TopMostLogo = styled(Typography)(() => ({
-  '@media (max-width: 1024px)': { fontSize: '4.5rem' },
-  '@media (max-width: 768px)': { display: 'none' },
-}))
-
-export const SpanWord = styled(Box)(() => ({
-  display: 'inline-block',
-  color: '#159EEC',
-}))
-
 export const TopMostRightContainer = styled(Box)(() => ({
   display: 'flex',
   flexWrap: 'wrap',

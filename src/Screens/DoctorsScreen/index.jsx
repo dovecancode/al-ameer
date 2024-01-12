@@ -1,14 +1,11 @@
-import PageHeader from "../../components/PageHeader";
-import Footer from "../../components/Footer";
+import UnderConstractionUI from '../../components/UnderConstractionUI'
 
 function DoctorsScreen() {
   return (
     <div>
-      <PageHeader />
-      DoctorsScreen
-      <Footer />
+      <UnderConstractionUI />
     </div>
-  );
+  )
 }
 
-export default DoctorsScreen;
+export default DoctorsScreen

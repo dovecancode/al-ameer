@@ -1,14 +1,11 @@
-import Footer from "../../components/Footer";
-import PageHeader from "../../components/PageHeader";
+import UnderConstractionUI from '../../components/UnderConstractionUI'
 
 function ContactScreen() {
   return (
     <div>
-      <PageHeader />
-      ContactScreen
-      <Footer />
+      <UnderConstractionUI />
     </div>
-  );
+  )
 }
 
-export default ContactScreen;
+export default ContactScreen
