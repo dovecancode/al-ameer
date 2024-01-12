@@ -1,14 +1,11 @@
-import Footer from "../../components/Footer";
-import PageHeader from "../../components/PageHeader";
+import UnderConstractionUI from '../../components/UnderConstractionUI'
 
 function ServicesScreen() {
   return (
     <div>
-      <PageHeader />
-      ServicesScreen
-      <Footer />
+      <UnderConstractionUI />
     </div>
-  );
+  )
 }
 
-export default ServicesScreen;
+export default ServicesScreen
