@@ -7,10 +7,15 @@ import DashSidebar from '../components/DashSidebar'
 function DashboardLayout() {
   return (
     <Stack direction="row" sx={{ height: '100vh' }}>
-      <Box sx={{ flex: 1, background: '#FFF' }}>
+      <Box sx={{ background: '#FFF' }}>
         <DashSidebar />
       </Box>
-      <Box sx={{ flex: 5, background: 'teal' }}>
+      <Box
+        sx={{
+          background: 'teal',
+          width: '100%',
+        }}
+      >
         <DashHeader />
         <Box component="main">
           <Container>
