@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@mui/material";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from '@mui/material'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
   AboutScreen,
   AppointmentScreen,
@@ -8,12 +8,14 @@ import {
   HomeScreen,
   NewsScreen,
   ServicesScreen,
-} from "./Screens";
-import theme from "./ThemeChanger";
+} from './Screens'
+import theme from './ThemeChanger'
 // import Footer from './components/Footer'
-import DashboardLayout from "./DashboardLayout";
-import { Dashboard } from "./Screens/DashboardScreens";
-import DashboardPrivateRoute from "./components/DashboardPrivateRoute";
+import DashboardLayout from './DashboardLayout'
+import { Dashboard } from './Screens/DashboardScreens'
+import DashboardPrivateRoute from './components/DashboardPrivateRoute'
+import LoginScreen from './Screens/LoginScreen'
+import SignupScreen from './Screens/SignupScreen'
 
 // import Footer from './components/Footer'
 // import Header from './components/Header'
@@ -33,6 +35,8 @@ function App() {
           <Route path="news" element={<NewsScreen />} />
           <Route path="contact" element={<ContactScreen />} />
           <Route path="appointment" element={<AppointmentScreen />} />
+          <Route path="login" element={<LoginScreen />} />
+          <Route path="signup" element={<SignupScreen />} />
 
           <Route
             path="/dashboard/*"
@@ -48,7 +52,7 @@ function App() {
         {/* <Footer /> */}
       </BrowserRouter>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
