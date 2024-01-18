@@ -8,6 +8,7 @@ import ConstructionPageImage from '../ConstructionPageImage'
 import TopLogo from '../TopLogo'
 import SubmitButton from '../shared/SubmitButton'
 import { Item } from './style'
+import { Link } from 'react-router-dom'
 
 export default function UnderConstractionUI() {
   const isDesktop = useMediaQuery('(min-width:769px)')
@@ -77,6 +78,19 @@ export default function UnderConstractionUI() {
         <Grid item sm={12} md={6}>
           <Item>
             <ConstructionPageImage />
+          </Item>
+          <Item sx={{ marginLeft: isDesktop ? '18rem' : '0' }}>
+            <Link to="/">
+              <SubmitButton
+                path="/"
+                width={isDesktop ? '22rem' : '100%'}
+                height="5.5rem"
+                backgroundnonhover="#1f2b6c"
+                colornonhover="#fff"
+              >
+                Back to Home
+              </SubmitButton>
+            </Link>
           </Item>
         </Grid>
         <Grid item xs={6} md={12}>
