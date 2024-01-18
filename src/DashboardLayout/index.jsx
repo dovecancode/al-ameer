@@ -12,7 +12,6 @@ function DashboardLayout() {
       </Box>
       <Box
         sx={{
-          background: 'teal',
           width: '100%',
         }}
       >
