@@ -3,6 +3,7 @@ import SignalCellularAltIcon from '@mui/icons-material/SignalCellularAlt'
 import {
   Box,
   Divider,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -12,12 +13,11 @@ import {
   useMediaQuery,
 } from '@mui/material'
 import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink as RouterNavLink } from 'react-router-dom'
 import { Logo, RoleContainer } from './DashSidebar.Element'
 import { dashBoardButton } from './data'
 
 function DashSidebar() {
-  const location = useLocation()
   const isLaptop = useMediaQuery('(max-width:1024px)')
   const [boxVisible, setBoxVisible] = useState(false)
 
@@ -26,13 +26,128 @@ function DashSidebar() {
     console.log('Box Visibility:', boxVisible)
   }
 
-  const itemClick = () => {
-    setBoxVisible(false)
-  }
+  const userRole = 3
 
   return (
     <>
-      {!isLaptop && (
+      {isLaptop ? (
+        <>
+          {boxVisible ? (
+            <>
+              <CancelOutlinedIcon
+                onClick={clickIcon}
+                sx={{
+                  fontSize: '3.5rem',
+                  color: '#159EEC',
+                  margin: '2rem',
+                  zIndex: '1',
+                }}
+              />
+              <Box
+                component="section"
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  width: '30rem',
+                }}
+              >
+                <Box>
+                  <Logo variant="h1">
+                    Al-
+                    <Box component="span" sx={{ color: '#159EEC' }}>
+                      Ameer
+                    </Box>
+                  </Logo>
+                  <RoleContainer>
+                    <Typography
+                      sx={{
+                        textAlign: 'center',
+                        fontSize: '2rem',
+                        fontWeight: '600',
+                      }}
+                    >
+                      Administrator
+                    </Typography>
+                    <Typography
+                      sx={{
+                        textAlign: 'center',
+                        fontSize: '1.5rem',
+                        fontWeight: '300',
+                      }}
+                    >
+                      admin@al-ameer.com
+                    </Typography>
+                  </RoleContainer>
+                </Box>
+                <Divider />
+                <List sx={{ margin: '0 auto', color: '#159EEC' }}>
+                  {dashBoardButton[userRole].map(({ path, label, icon }) => (
+                    <Link
+                      key={label}
+                      to={path}
+                      sx={{
+                        color: '#159EEC',
+                        textDecoration: 'none',
+                        '&.active, &.active .MuiSvgIcon-root': {
+                          color: '#1F2B6C',
+                        },
+                      }}
+                      component={RouterNavLink}
+                    >
+                      <ListItem>
+                        <ListItemButton>
+                          <ListItemIcon>{icon}</ListItemIcon>
+                          <ListItemText primary={label} />
+                        </ListItemButton>
+                      </ListItem>
+                    </Link>
+                  ))}
+                </List>
+              </Box>
+            </>
+          ) : (
+            <>
+              <SignalCellularAltIcon
+                onClick={clickIcon}
+                sx={{
+                  fontSize: '3.5rem',
+                  color: '#159EEC',
+                  margin: '2rem',
+                  transform: 'rotate(90deg) scaleX(-1)',
+                  zIndex: '1',
+                }}
+              />
+              <Box>
+                <Divider />
+                <List sx={{ margin: '0 auto', color: '#159EEC' }}>
+                  {dashBoardButton[userRole].map(({ path, label, icon }) => (
+                    <Link
+                      key={label}
+                      to={path}
+                      sx={{
+                        color: '#159EEC',
+                        textDecoration: 'none',
+                        '&.active, &.active .MuiSvgIcon-root': {
+                          color: '#1F2B6C',
+                        },
+                      }}
+                      component={RouterNavLink}
+                    >
+                      <ListItem>
+                        <ListItemButton>
+                          <ListItemIcon sx={{ marginRight: '-2.5rem' }}>
+                            {icon}
+                          </ListItemIcon>
+                        </ListItemButton>
+                      </ListItem>
+                    </Link>
+                  ))}
+                </List>
+              </Box>
+            </>
+          )}
+        </>
+      ) : (
         <Box
           component="section"
           sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}
@@ -67,99 +182,22 @@ function DashSidebar() {
           </Box>
           <Divider />
           <List sx={{ margin: '0 auto', color: '#159EEC' }}>
-            {dashBoardButton.map(({ id, path, label, icon }) => (
+            {dashBoardButton[userRole].map(({ path, label, icon }) => (
               <Link
-                key={id}
+                key={label}
                 to={path}
-                style={{
-                  color: location.pathname === path ? '#1F2B6C' : '#159EEC',
+                sx={{
+                  color: '#159EEC',
+                  textDecoration: 'none',
+                  '&.active, &.active .MuiSvgIcon-root': {
+                    color: '#1F2B6C',
+                  },
                 }}
+                component={RouterNavLink}
               >
                 <ListItem>
                   <ListItemButton>
-                    <ListItemIcon sx={{ marginRight: '-.5rem' }}>
-                      {icon}
-                    </ListItemIcon>
-                    <ListItemText primary={label} />
-                  </ListItemButton>
-                </ListItem>
-              </Link>
-            ))}
-          </List>
-        </Box>
-      )}
-      {isLaptop && (
-        <>
-          {boxVisible ? (
-            <CancelOutlinedIcon
-              onClick={clickIcon}
-              sx={{
-                fontSize: '3.5rem',
-                color: '#159EEC',
-                margin: '2rem',
-                zIndex: '1',
-              }}
-            />
-          ) : (
-            <SignalCellularAltIcon
-              onClick={clickIcon}
-              sx={{
-                fontSize: '3.5rem',
-                color: '#159EEC',
-                margin: '2rem',
-                transform: 'rotate(90deg) scaleX(-1)',
-                zIndex: '1',
-              }}
-            />
-          )}
-        </>
-      )}
-      {boxVisible && (
-        <Box
-          component="section"
-          sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}
-        >
-          <Box>
-            <Logo variant="h1">
-              Al-
-              <Box component="span" sx={{ color: '#159EEC' }}>
-                Ameer
-              </Box>
-            </Logo>
-            <RoleContainer>
-              <Typography
-                sx={{
-                  textAlign: 'center',
-                  fontSize: '2rem',
-                  fontWeight: '600',
-                }}
-              >
-                Administrator
-              </Typography>
-              <Typography
-                sx={{
-                  textAlign: 'center',
-                  fontSize: '1.5rem',
-                  fontWeight: '300',
-                }}
-              >
-                admin@al-ameer.com
-              </Typography>
-            </RoleContainer>
-          </Box>
-          <Divider />
-          <List sx={{ margin: '0 auto', color: '#159EEC' }}>
-            {dashBoardButton.map(({ id, path, label, icon }) => (
-              <Link
-                key={id}
-                to={path}
-                style={{
-                  color: location.pathname === path ? '#1F2B6C' : '#159EEC',
-                }}
-              >
-                <ListItem onClick={itemClick}>
-                  <ListItemButton>
-                    <ListItemIcon sx={{ marginRight: '-.5rem' }}>
+                    <ListItemIcon>
                       {icon}
                     </ListItemIcon>
                     <ListItemText primary={label} />
