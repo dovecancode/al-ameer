@@ -1,8 +1,8 @@
 import { Box, Container, Stack } from '@mui/material'
 import { Outlet } from 'react-router-dom'
-import DashFooter from '../components/DashFooter'
-import DashHeader from '../components/DashHeader'
-import DashSidebar from '../components/DashSidebar'
+import DashFooter from '../../../components/Dashboard/DashFooter'
+import DashHeader from '../../../components/Dashboard/DashHeader'
+import DashSidebar from '../../../components/Dashboard/DashSidebar'
 
 function DashboardLayout() {
   return (

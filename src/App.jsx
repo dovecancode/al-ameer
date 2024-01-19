@@ -1,5 +1,5 @@
-import { ThemeProvider } from "@mui/material";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from '@mui/material'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
   AboutScreen,
   AppointmentScreen,
@@ -8,12 +8,12 @@ import {
   HomeScreen,
   NewsScreen,
   ServicesScreen,
-} from "./Screens";
-import theme from "./ThemeChanger";
+} from './Screens'
+import theme from './ThemeChanger'
 // import Footer from './components/Footer'
-import DashboardLayout from "./DashboardLayout";
-import { Dashboard } from "./Screens/DashboardScreens";
-import DashboardPrivateRoute from "./components/DashboardPrivateRoute";
+import { Dashboard } from './Screens/DashboardScreens'
+import DashboardLayout from './Screens/DashboardScreens/DashboardLayout'
+import DashboardPrivateRoute from './components/DashboardPrivateRoute'
 
 // import Footer from './components/Footer'
 // import Header from './components/Header'
@@ -48,7 +48,7 @@ function App() {
         {/* <Footer /> */}
       </BrowserRouter>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
