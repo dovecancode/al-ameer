@@ -1,9 +1,9 @@
-import DashCards from '../../../components/Dashboard/DashCards'
+import DashCardsStatus from '../../../components/Dashboard/DashCardsStatus'
 
 function DashboardScreen() {
   return (
     <>
-      <DashCards />
+      <DashCardsStatus />
     </>
   )
 }
