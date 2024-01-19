@@ -10,22 +10,15 @@ import {
   ServicesScreen,
 } from './Screens'
 import theme from './ThemeChanger'
-// import Footer from './components/Footer'
 
-import { Dashboard } from './Screens/DashboardScreens'
+import { DashboardScreen, SettingsScreen } from './Screens/DashboardScreens'
 import DashboardLayout from './Screens/DashboardScreens/DashboardLayout'
 import DashboardPrivateRoute from './components/DashboardPrivateRoute'
-
-// import Footer from './components/Footer'
-// import Header from './components/Header'
-// import Navbar from './components/Navbar'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        {/* <Header />
-        <Navbar /> */}
         <Routes>
           <Route index="*" element={<HomeScreen />} />
           <Route path="about-us" element={<AboutScreen />} />
@@ -43,10 +36,10 @@ function App() {
               </DashboardPrivateRoute>
             }
           >
-            <Route index element={<Dashboard />} />
+            <Route index element={<DashboardScreen />} />
+            <Route path="settings" element={<SettingsScreen />} />
           </Route>
         </Routes>
-        {/* <Footer /> */}
       </BrowserRouter>
     </ThemeProvider>
   )
