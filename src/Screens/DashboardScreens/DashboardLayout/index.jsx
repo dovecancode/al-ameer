@@ -6,8 +6,8 @@ import DashSidebar from '../../../components/Dashboard/DashSidebar'
 
 function DashboardLayout() {
   return (
-    <Stack direction="row" sx={{ height: '100vh' }}>
-      <Box sx={{ background: '#FFF' }}>
+    <Stack direction="row" sx={{ height: '100vh', background: '#F7F9FA' }}>
+      <Box sx={{ borderRight: '0.2rem #eee solid' }}>
         <DashSidebar />
       </Box>
       <Box
@@ -15,12 +15,16 @@ function DashboardLayout() {
           width: '100%',
         }}
       >
-        <DashHeader />
-        <Box component="main">
-          <Container>
+        <Container
+          className="dashboard-container"
+          maxWidth={false}
+          sx={{ maxWidth: '98%' }}
+        >
+          <DashHeader />
+          <Box component="main">
             <Outlet />
-          </Container>
-        </Box>
+          </Box>
+        </Container>
         <DashFooter />
       </Box>
     </Stack>
