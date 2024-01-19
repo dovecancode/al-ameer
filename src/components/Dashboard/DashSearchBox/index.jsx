@@ -2,8 +2,8 @@ import { FormControl, InputAdornment } from '@mui/material'
 import { IoSearchSharp } from 'react-icons/io5'
 import { Form, SearchBoxField } from './Searchbox.elements'
 
+import SubmitButton from '../../shared/SubmitButton'
 import { HeaderStack } from '../DashHeader/DashHeader.elements'
-import SubmitButton from '../shared/SubmitButton'
 
 function DashSearchBox() {
   return (
