@@ -1,13 +1,12 @@
 import { Box, Typography } from '@mui/material'
 import { FaCalendarAlt } from 'react-icons/fa'
-import { todaysDate } from '../../utils/helper'
+import { todaysDate } from '../../../utils/helper'
 import {
   Calendar,
   CalendarContainer,
   DateStack,
 } from './CurrentDateDisplay.element'
 
-console.log(todaysDate())
 function DashHeaderCalendar() {
   return (
     <CalendarContainer className="calendar">

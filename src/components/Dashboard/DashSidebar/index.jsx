@@ -197,9 +197,7 @@ function DashSidebar() {
               >
                 <ListItem>
                   <ListItemButton>
-                    <ListItemIcon>
-                      {icon}
-                    </ListItemIcon>
+                    <ListItemIcon>{icon}</ListItemIcon>
                     <ListItemText primary={label} />
                   </ListItemButton>
                 </ListItem>
