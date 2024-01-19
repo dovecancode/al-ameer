@@ -17,7 +17,7 @@ export const StatusCard = styled(Paper)(({ width }) => ({
     flex: '1 1 calc(100% / 2 - 5rem)',
   },
 
-  '@media(width >= 80rem)': {
+  '@media(width >= 90rem)': {
     flex: '1 1 calc(100% / 4 - 5rem)',
   },
 }))
