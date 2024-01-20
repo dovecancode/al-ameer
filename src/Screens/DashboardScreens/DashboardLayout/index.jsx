@@ -1,12 +1,11 @@
 import { Box, Container, Stack } from '@mui/material'
 import { Outlet } from 'react-router-dom'
-import DashFooter from '../../../components/Dashboard/DashFooter'
 import DashHeader from '../../../components/Dashboard/DashHeader'
 import DashSidebar from '../../../components/Dashboard/DashSidebar'
 
 function DashboardLayout() {
   return (
-    <Stack direction="row" sx={{ height: '100vh', background: '#F7F9FA' }}>
+    <Stack direction="row" sx={{ background: '#F7F9FA' }}>
       <Box sx={{ borderRight: '0.2rem #eee solid' }}>
         <DashSidebar />
       </Box>
@@ -25,7 +24,6 @@ function DashboardLayout() {
             <Outlet />
           </Box>
         </Container>
-        <DashFooter />
       </Box>
     </Stack>
   )
