@@ -29,9 +29,7 @@ function Hero() {
                 headingText={'Leading the Way Medical Excellence'}
               />
               <Box>
-                <ButtonLink path="services" htmlELType="span">
-                  our services
-                </ButtonLink>
+                <ButtonLink path="services">our services</ButtonLink>
               </Box>
             </Grid>
           </Grid>
