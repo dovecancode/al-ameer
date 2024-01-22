@@ -23,7 +23,7 @@ export const dashBoardButton = {
     },
     {
       label: 'Doctor',
-      path: 'schedule',
+      path: 'doctor',
       icon: createIconElement(MedicalServicesOutlinedIcon),
     },
     {

@@ -13,6 +13,7 @@ import theme from './ThemeChanger'
 
 import { DashboardScreen, SettingsScreen } from './Screens/DashboardScreens'
 import DashboardLayout from './Screens/DashboardScreens/DashboardLayout'
+import PatientsScreen from './Screens/DashboardScreens/PatientsScreen'
 import DashboardPrivateRoute from './components/DashboardPrivateRoute'
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
           >
             <Route index element={<DashboardScreen />} />
             <Route path="settings" element={<SettingsScreen />} />
+            <Route path="patients" element={<PatientsScreen />} />
           </Route>
         </Routes>
       </BrowserRouter>
