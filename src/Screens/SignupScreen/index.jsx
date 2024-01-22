@@ -1,5 +1,11 @@
+import SignUp from '../../components/Features/Authentications/Signup'
+
 function SignupScreen() {
-  return <div>index</div>
+  return (
+    <>
+      <SignUp />
+    </>
+  )
 }
 
 export default SignupScreen
