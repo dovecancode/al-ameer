@@ -27,6 +27,11 @@ export const dashBoardButton = {
       icon: createIconElement(MedicalServicesOutlinedIcon),
     },
     {
+      label: 'Schedule',
+      path: 'schedule',
+      icon: createIconElement(AccessAlarmIcon),
+    },
+    {
       label: 'Appointment',
       path: 'appointment',
       icon: createIconElement(AccessAlarmIcon),

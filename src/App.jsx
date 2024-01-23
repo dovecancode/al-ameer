@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider } from '@mui/material'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
   AboutScreen,
@@ -19,6 +19,7 @@ import DashboardPrivateRoute from './components/DashboardPrivateRoute'
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <BrowserRouter>
         <Routes>
           <Route index="*" element={<HomeScreen />} />

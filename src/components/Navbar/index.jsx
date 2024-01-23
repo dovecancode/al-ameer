@@ -162,7 +162,6 @@ function Navbar() {
                     to={link}
                     style={{
                       color: '#1F2B6C',
-                      fontFamily: 'Work Sans',
                       fontSize: '1.8rem',
                       fontWeight: location.pathname === link ? '700' : '',
                       margin: '0 auto',
