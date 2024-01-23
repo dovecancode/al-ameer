@@ -1,52 +1,52 @@
-import * as React from 'react';
-import { useLocation, Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import Container from '@mui/material/Container';
-import MenuItem from '@mui/material/MenuItem';
-import SearchIcon from '@mui/icons-material/Search';
-import CloseIcon from '@mui/icons-material/Close';
-import { pageLinks } from './pagelinks';
-import ButtonLink from '../shared/ButtonLink';
+import CloseIcon from '@mui/icons-material/Close'
+import MenuIcon from '@mui/icons-material/Menu'
+import SearchIcon from '@mui/icons-material/Search'
+import AppBar from '@mui/material/AppBar'
+import Box from '@mui/material/Box'
+import Container from '@mui/material/Container'
+import IconButton from '@mui/material/IconButton'
+import Menu from '@mui/material/Menu'
+import MenuItem from '@mui/material/MenuItem'
+import Toolbar from '@mui/material/Toolbar'
+import Typography from '@mui/material/Typography'
+import PropTypes from 'prop-types'
+import * as React from 'react'
+import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import ButtonLink from '../shared/ButtonLink'
+import { pageLinks } from './pagelinks'
 
 function Navbar() {
-  const location = useLocation();
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
-  const [isToggle, setIsToggle] = useState(false);
-  const [scrolling, setScrolling] = useState(false);
+  const location = useLocation()
+  const [anchorElUser, setAnchorElUser] = React.useState(null)
+  const [isToggle, setIsToggle] = useState(false)
+  const [scrolling, setScrolling] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setScrolling(true);
+        setScrolling(true)
       } else {
-        setScrolling(false);
+        setScrolling(false)
       }
-    };
+    }
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-    setIsToggle(!isToggle);
-  };
+    setAnchorElUser(event.currentTarget)
+    setIsToggle(!isToggle)
+  }
 
   const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-    setIsToggle(false);
-  };
+    setAnchorElUser(null)
+    setIsToggle(false)
+  }
 
   return (
     <AppBar position={scrolling ? 'fixed' : 'static'} top={0}>
@@ -162,7 +162,6 @@ function Navbar() {
                     to={link}
                     style={{
                       color: '#1F2B6C',
-                      fontFamily: 'Work Sans',
                       fontSize: '1.8rem',
                       fontWeight: location.pathname === link ? '700' : '',
                       margin: '0 auto',
@@ -173,7 +172,7 @@ function Navbar() {
                 </MenuItem>
               ))}
               <MenuItem onClick={handleCloseUserMenu}>
-                <ButtonLink path="appointment" htmlELType="a">
+                <ButtonLink path="/appointment" htmlELType="a">
                   appointment
                 </ButtonLink>
               </MenuItem>
@@ -182,13 +181,13 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+  )
 }
 
 Link.propTypes = {
   id: PropTypes.number,
   link: PropTypes.string,
   text: PropTypes.string,
-};
+}
 
-export default Navbar;
+export default Navbar

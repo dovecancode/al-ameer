@@ -26,7 +26,7 @@ function DashSidebar() {
     console.log('Box Visibility:', boxVisible)
   }
 
-  const userRole = 3
+  const userRole = 1
 
   return (
     <>
