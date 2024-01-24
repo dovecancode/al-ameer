@@ -2,10 +2,10 @@ import { TableHead, TableRow } from '@mui/material'
 import PropTypes from 'prop-types'
 import { TCell } from './DashTableHead.elements'
 
-function DashTableHead({ columnHeader }) {
+function DashTableHead({ columnHeader, bgcolor }) {
   return (
     // Please create a header array
-    <TableHead>
+    <TableHead sx={{ backgroundColor:  bgcolor  }}>
       <TableRow>
         {columnHeader.map((header, idx) => (
           <TCell key={`theader-#${idx}`}>{header}</TCell>
@@ -16,7 +16,8 @@ function DashTableHead({ columnHeader }) {
 }
 
 DashTableHead.propTypes = {
-  columnHeader: PropTypes.string,
+  columnHeader: PropTypes.array,
+  bgcolor: PropTypes.string,
 }
 
 export default DashTableHead
