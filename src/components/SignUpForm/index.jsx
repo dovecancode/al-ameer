@@ -1,6 +1,10 @@
 import {
   Box,
   FormControl,
+  IconButton,
+  InputAdornment,
+  InputLabel,
+  OutlinedInput,
   Paper,
   Stack,
   TextField,
@@ -14,6 +18,10 @@ import GoogleIcon from '@mui/icons-material/Google'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import AppleIcon from '@mui/icons-material/Apple'
 import styled from '@emotion/styled'
+import { SpanLogIn } from './SignUpForm.elements'
+import { useState } from 'react'
+import Visibility from '@mui/icons-material/Visibility'
+import VisibilityOff from '@mui/icons-material/VisibilityOff'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -34,25 +42,40 @@ function SignUpForm() {
   })
 
   console.log('errors', errors)
-
   const onSubmit = (data) => console.log(data)
-
   const isDesktop = useMediaQuery('(min-width:769px)')
+
+  //!for FormControl Adornment
+  const [showPassword, setShowPassword] = useState(false)
+  const handleClickShowPassword = () => setShowPassword((show) => !show)
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault()
+  }
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+  const handleClickShowConfirmPassword = () =>
+    setShowConfirmPassword((show) => !show)
+  const handleMouseDownConfirmPassword = (event) => {
+    event.preventDefault()
+  }
 
   return (
     <>
       <Stack
-        sx={{ flex: 1, py: '10rem' }}
+        sx={{ flex: 1, pt: '10rem' }}
         direction={{ xs: 'column' }}
         spacing={{ xs: 6 }}
         textAlign="center"
       >
-        <Box sx={{ mt: 4, mb: 7 }}>
+        <Box sx={{ mt: 4 }}>
           <TopLogo />
         </Box>
         <Box
           component="form"
           // sx={{ flex: 1 }}
+          display="flex"
+          gap={{ xs: 3 }}
+          flexDirection="column"
+          paddingX={isDesktop ? '34.5rem' : '4rem'}
           onSubmit={handleSubmit(onSubmit)}
         >
           <FormControl sx={{ gap: 3 }}>
@@ -75,43 +98,70 @@ function SignUpForm() {
                 },
               })}
             />
-            <TextField
-              id="outlined-basic"
-              label="password"
-              variant="outlined"
-              sx={{ width: isDesktop ? '30rem' : '100%' }}
-              {...register('password', { required: true })}
-              {...register('password', { required: 'This is required' })}
-              {...register('password', {
-                pattern: {
-                  value: /[A-Z0-9._%+-]/,
-                  message: 'Invalid password',
-                },
-              })}
-            />
-            <TextField
-              id="outlined-basic"
-              label="Confirm Password"
-              variant="outlined"
-              sx={{ width: isDesktop ? '30rem' : '100%' }}
-              {...register('confirmPassword', { required: true })}
-              {...register('confirmPassword', { required: 'This is required' })}
-              {...register('confirmPassword', {
-                pattern: {
-                  value: /[A-Z0-9._%+-]/,
-                  message: 'Invalid password',
-                },
-              })}
-            />
-            <SubmitButton
-              type="submit"
-              height="5.5rem"
-              backgroundnonhover="#1f2b6c"
-              colornonhover="#fff"
-            >
-              Register
-            </SubmitButton>
           </FormControl>
+          <FormControl
+            variant="outlined"
+            sx={{ width: isDesktop ? '30rem' : '100%', gap: 3 }}
+            {...register('password', { required: true })}
+            {...register('password', { required: 'This is required' })}
+          >
+            <InputLabel htmlFor="outlined-adornment-password">
+              Password
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-password"
+              type={showPassword ? 'text' : 'password'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleClickShowPassword}
+                    onMouseDown={handleMouseDownPassword}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              label="Password"
+            />
+          </FormControl>
+          <FormControl
+            variant="outlined"
+            sx={{ width: isDesktop ? '30rem' : '100%', gap: 3 }}
+            {...register('confirmPassword', { required: true })}
+            {...register('confirmPassword', { required: 'This is required' })}
+          >
+            <InputLabel htmlFor="outlined-adornment-password">
+              Confirm Password
+            </InputLabel>
+            <OutlinedInput
+              id="outlined-adornment-password"
+              type={showConfirmPassword ? 'text' : 'password'}
+              endAdornment={
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle confirm password visibility"
+                    onClick={handleClickShowConfirmPassword}
+                    onMouseDown={handleMouseDownConfirmPassword}
+                    edge="end"
+                  >
+                    {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              }
+              label="Confirm Password"
+            />
+          </FormControl>
+          <SubmitButton
+            type="submit"
+            height="5.5rem"
+            backgroundnonhover="#1f2b6c"
+            colornonhover="#fff"
+            width={isDesktop ? '30rem' : '100%'}
+          >
+            Register
+          </SubmitButton>
         </Box>
         <Box>
           <Typography variant="h6">or continue with</Typography>
@@ -132,6 +182,12 @@ function SignUpForm() {
               <AppleIcon sx={{ fontSize: '2rem', color: '#283544' }} />
             </Item>
           </Stack>
+        </Box>
+        <Box>
+          <Typography variant="h4">If you already have an account</Typography>
+          <Typography variant="h4">
+            You can <SpanLogIn>Login here!</SpanLogIn>
+          </Typography>
         </Box>
       </Stack>
     </>

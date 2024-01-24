@@ -1,5 +1,11 @@
+import Login from '../../components/Features/Authentications/Login'
+
 function LoginScreen() {
-  return <div>index</div>
+  return (
+    <>
+      <Login />
+    </>
+  )
 }
 
 export default LoginScreen
