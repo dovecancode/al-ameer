@@ -6,7 +6,7 @@ import {
   TableContainer,
   TableRow,
 } from '@mui/material'
-import DashTableHead from '../DashTableHead'
+import DashTableHead from '../../shared/DashTableHead'
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein }
