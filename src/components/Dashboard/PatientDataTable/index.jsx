@@ -20,13 +20,17 @@ const rows = [
   createData('Gingerbread', 356, 16.0, 49, 3.9),
 ]
 
+const header = ['Patient ID', 'Patient Name', 'Gender', 'Age', 'Date of Birth', 'Address', 'Contact Number', 'Disease', 'Doctor Assigned', 'Status']
+
+const backgroundColor = '#159EEC'
+
 function PatientDataTable() {
   return (
     <>
       <Paper sx={{ width: '100%', mb: 2 }}>
         <TableContainer>
           <Table aria-label="simple table">
-            <DashTableHead />
+            <DashTableHead columnHeader={header} bgcolor={backgroundColor}/>
             <TableBody>
               {rows.map((row, idx) => (
                 <TableRow
