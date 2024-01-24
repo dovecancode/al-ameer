@@ -26,7 +26,7 @@ function DashSidebar() {
     console.log('Box Visibility:', boxVisible)
   }
 
-  const userRole = 1
+  const userRole = 3
 
   return (
     <>
@@ -79,7 +79,7 @@ function DashSidebar() {
                     </Typography>
                   </RoleContainer>
                 </Box>
-                <Divider />
+                <Divider variant="middle" />
                 <List sx={{ margin: '0 auto', color: '#159EEC' }}>
                   {dashBoardButton[userRole].map(({ path, label, icon }) => (
                     <Link
@@ -118,7 +118,7 @@ function DashSidebar() {
                 }}
               />
               <Box>
-                <Divider />
+                <Divider variant="middle" />
                 <List sx={{ margin: '0 auto', color: '#159EEC' }}>
                   {dashBoardButton[userRole].map(({ path, label, icon }) => (
                     <Link
