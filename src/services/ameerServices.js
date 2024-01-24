@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import { createClient } from "@supabase/supabase-js"
 
 class AmeerServices {
   // Create a single supabase client for interacting with your database
