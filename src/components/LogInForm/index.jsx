@@ -18,7 +18,7 @@ import GoogleIcon from '@mui/icons-material/Google'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import AppleIcon from '@mui/icons-material/Apple'
 import styled from '@emotion/styled'
-import { SpanSignUp } from './SignUpForm.elements'
+import { SpanLogIn } from './LogInForm.elements'
 import { useState } from 'react'
 import Visibility from '@mui/icons-material/Visibility'
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
@@ -32,7 +32,7 @@ const Item = styled(Paper)(({ theme }) => ({
   width: '8rem',
 }))
 
-function SignUpForm() {
+function LogInForm() {
   const {
     register,
     handleSubmit,
@@ -51,12 +51,6 @@ function SignUpForm() {
   const handleMouseDownPassword = (event) => {
     event.preventDefault()
   }
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const handleClickShowConfirmPassword = () =>
-    setShowConfirmPassword((show) => !show)
-  const handleMouseDownConfirmPassword = (event) => {
-    event.preventDefault()
-  }
 
   return (
     <>
@@ -68,6 +62,14 @@ function SignUpForm() {
       >
         <Box sx={{ mt: 4 }}>
           <TopLogo />
+        </Box>
+        <Box>
+          <Typography variant="h3" fontSize="3.5rem">
+            Welcome Back
+          </Typography>
+          <Typography variant="h6">
+            Login with your details to continue
+          </Typography>
         </Box>
         <Box
           component="form"
@@ -81,7 +83,7 @@ function SignUpForm() {
           <FormControl sx={{ gap: 3 }}>
             <Box>
               <Typography variant="h4" textAlign="left">
-                Sign Up
+                Login
               </Typography>
             </Box>
             <TextField
@@ -126,33 +128,7 @@ function SignUpForm() {
               label="Password"
             />
           </FormControl>
-          <FormControl
-            variant="outlined"
-            sx={{ width: isDesktop ? '30rem' : '100%', gap: 3 }}
-            {...register('confirmPassword', { required: true })}
-            {...register('confirmPassword', { required: 'This is required' })}
-          >
-            <InputLabel htmlFor="outlined-adornment-password">
-              Confirm Password
-            </InputLabel>
-            <OutlinedInput
-              id="outlined-adornment-password"
-              type={showConfirmPassword ? 'text' : 'password'}
-              endAdornment={
-                <InputAdornment position="end">
-                  <IconButton
-                    aria-label="toggle confirm password visibility"
-                    onClick={handleClickShowConfirmPassword}
-                    onMouseDown={handleMouseDownConfirmPassword}
-                    edge="end"
-                  >
-                    {showConfirmPassword ? <VisibilityOff /> : <Visibility />}
-                  </IconButton>
-                </InputAdornment>
-              }
-              label="Confirm Password"
-            />
-          </FormControl>
+
           <SubmitButton
             type="submit"
             height="5.5rem"
@@ -160,7 +136,7 @@ function SignUpForm() {
             colornonhover="#fff"
             width={isDesktop ? '30rem' : '100%'}
           >
-            Register
+            Login
           </SubmitButton>
         </Box>
         <Box>
@@ -184,9 +160,8 @@ function SignUpForm() {
           </Stack>
         </Box>
         <Box>
-          <Typography variant="h4">If you already have an account</Typography>
           <Typography variant="h4">
-            You can <SpanSignUp>Login here!</SpanSignUp>
+            Don&apos;t have any account? <SpanLogIn>Sign Up</SpanLogIn>
           </Typography>
         </Box>
       </Stack>
@@ -194,4 +169,4 @@ function SignUpForm() {
   )
 }
 
-export default SignUpForm
+export default LogInForm

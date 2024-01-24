@@ -12,11 +12,10 @@ export default function SignUp() {
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
         // spacing={{ xs: 1, sm: 2, md: 2 }}
-        flex="wrap"
       >
         <SignUpImage
           sx={{
-            display: isDesktop ? 'flex: 1' : 'none',
+            display: isDesktop ? 'flex' : 'none',
           }}
         />
         <SignUpForm />
