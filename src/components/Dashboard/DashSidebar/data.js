@@ -34,7 +34,7 @@ export const dashBoardButton = {
     {
       label: 'Appointment',
       path: 'appointment',
-      icon: createIconElement(AccessAlarmIcon),
+      icon: createIconElement(BookmarkBorderIcon),
     },
     {
       label: 'Patients',
@@ -71,7 +71,7 @@ export const dashBoardButton = {
   ],
   3: [
     {
-      label: 'Dashboard',
+      label: 'Home',
       path: '/dashboard',
       icon: createIconElement(AnalyticsOutlinedIcon),
     },
