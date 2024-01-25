@@ -10,15 +10,16 @@ import {
   ServicesScreen,
 } from './Screens'
 import theme from './ThemeChanger'
+// import Footer from './components/Footer'
 
-import {
-  DashboardScreen,
-  SettingsScreen,
-} from './Screens/DashboardScreens'
-import DashboardLayout from './Screens/DashboardScreens/DashboardLayout'
-import PatientsScreen from './Screens/DashboardScreens/PatientsScreen'
-import DoctorScreen from './Screens/DashboardScreens/DoctorScreen'
+import LoginScreen from './Screens/LoginScreen'
+import SignupScreen from './Screens/SignupScreen'
 import DashboardPrivateRoute from './components/DashboardPrivateRoute'
+
+import { DashboardScreen, SettingsScreen } from './Screens/DashboardScreens'
+import DashboardLayout from './Screens/DashboardScreens/DashboardLayout'
+import DoctorScreen from './Screens/DashboardScreens/DoctorScreen'
+import PatientsScreen from './Screens/DashboardScreens/PatientsScreen'
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
           <Route path="news" element={<NewsScreen />} />
           <Route path="contact" element={<ContactScreen />} />
           <Route path="appointment" element={<AppointmentScreen />} />
+          <Route path="login" element={<LoginScreen />} />
+          <Route path="signup" element={<SignupScreen />} />
 
           <Route
             path="/dashboard/*"
