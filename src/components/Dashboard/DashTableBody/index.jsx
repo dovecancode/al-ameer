@@ -3,18 +3,6 @@ import { TBodyCell } from './DashTableBody.elements'
 
 import PropTypes from 'prop-types'
 
-// function filterdata(query) {
-//   let data = patientsData
-//   if (query) {
-//     data = patientsData.filter((patient) => {
-//       return `${patient.patientName} ${patient.patientID}`
-//         .toLowerCase()
-//         .includes(query.toLowerCase())
-//     })
-//   }
-//   return data
-// }
-
 function DashTableBody({ query, patientsData, isSelected, onSelectItem }) {
   patientsData = patientsData.filter((patient) => {
     return `${patient.patientName} ${patient.patientID}`
@@ -38,7 +26,7 @@ function DashTableBody({ query, patientsData, isSelected, onSelectItem }) {
                 inputProps={{ 'aria-label': 'Checkbox demo' }}
                 sx={{ '& .MuiSvgIcon-root': { fontSize: 20 } }}
                 checked={isSelectedItem}
-                onClick={(e) => onSelectItem(e, patient.patientID)}
+                onClick={() => onSelectItem(patient.patientID)}
               />
             </TBodyCell>
             <TBodyCell>{patient.patientID}</TBodyCell>

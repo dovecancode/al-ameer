@@ -59,6 +59,18 @@ const patientsData = [
     dDoctor: 'Dr. Becca Haper',
     patientStatus: 'approved',
   },
+  {
+    patientID: '#P-00006',
+    patientName: 'Kaye Maya',
+    gender: 'Female',
+    age: 45,
+    dBirth: '1978-11-01',
+    address: 'address 5',
+    phoneNumber: '09195685422',
+    disease: 'Heart Burn',
+    dDoctor: 'Dr. Becca Haper',
+    patientStatus: 'approved',
+  },
 ]
 
 export default patientsData

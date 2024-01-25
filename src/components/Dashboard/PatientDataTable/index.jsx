@@ -38,19 +38,28 @@ function PatientDataTable() {
     setSelected([])
   }
 
-  // this will fire and activate all checkebox in one go if handleClickAllItems fires
+  // this will fire and activate all checkbox in one go if handleClickAllItems fires
   function isSelected(id) {
     return selected.indexOf(id) !== -1
   }
 
-  function handleClickSelectedItem(e, id) {
-    setSelected((prev) => [...prev, id])
-    // const idx = selected.indexOf(id)
-    // let newSelected = []
-    // if (idx === -1) {
-    //   setSelected(idx)
-    // }
-    console.log(selected)
+  function handleClickSelectedItem(id) {
+    const selectedIndex = selected.indexOf(id)
+    let newSelected = []
+
+    if (selectedIndex === -1) {
+      newSelected = newSelected.concat(selected, id)
+    } else if (selectedIndex === 0) {
+      newSelected = newSelected.concat(selected.slice(1))
+    } else if (selectedIndex === selected.length - 1) {
+      newSelected = newSelected.concat(selected.slice(0, -1))
+    } else if (selectedIndex > 0) {
+      newSelected = newSelected.concat(
+        selected.slice(0, selectedIndex),
+        selected.slice(selectedIndex + 1)
+      )
+    }
+    setSelected(newSelected)
   }
 
   return (
