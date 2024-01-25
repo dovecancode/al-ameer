@@ -1,41 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 html {
   font-size: 62.5%; /* 62.5% of 16px = 10px */
 }
 
-:root {
-  --main-background: #fcfefe;
-  --main-text-color: #212124;
-  --header-primary-color: #1f2b6c;
-  --header-secondary-color: #159eec;
-  --footer-background: #1f2b6c;
-  --footer-text-color: #bfd2f8;
-  --navbar-background: #1f2b6c;
-  --navbar-text-color: #fcfefe;
-  --navbar-secondary-color: #bfd2f8;
-  --navbar-hover-color: #159eec;
-  --button-text-color: #1f2b6c;
-  --button-background: #bfd2f8;
-}
-
 * {
-  /* font-family: 'Work Sans'; */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
-  /* font-size: 12px; */
+  box-sizing: inherit;
 }
 
 body {
-  background-color: var(--main-background);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 .swiper-wrapper {
@@ -58,9 +35,9 @@ body {
 }
 
 .custom-pagination.swiper-pagination-bullet {
-  background-color: #FCFEFE;
+  background-color: #fcfefe;
 }
 
 .custom-pagination.swiper-pagination-bullet-active {
-  background-color: #BFD2F8;
+  background-color: #bfd2f8;
 }

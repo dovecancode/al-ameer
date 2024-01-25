@@ -1,4 +1,4 @@
-import { ThemeProvider } from '@mui/material'
+import { CssBaseline, ThemeProvider } from '@mui/material'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import {
   AboutScreen,
@@ -11,22 +11,21 @@ import {
 } from './Screens'
 import theme from './ThemeChanger'
 // import Footer from './components/Footer'
-import DashboardLayout from './DashboardLayout'
-import { Dashboard } from './Screens/DashboardScreens'
-import DashboardPrivateRoute from './components/DashboardPrivateRoute'
+
 import LoginScreen from './Screens/LoginScreen'
 import SignupScreen from './Screens/SignupScreen'
+import DashboardPrivateRoute from './components/DashboardPrivateRoute'
 
-// import Footer from './components/Footer'
-// import Header from './components/Header'
-// import Navbar from './components/Navbar'
+import { DashboardScreen, SettingsScreen } from './Screens/DashboardScreens'
+import DashboardLayout from './Screens/DashboardScreens/DashboardLayout'
+import DoctorScreen from './Screens/DashboardScreens/DoctorScreen'
+import PatientsScreen from './Screens/DashboardScreens/PatientsScreen'
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <BrowserRouter>
-        {/* <Header />
-        <Navbar /> */}
         <Routes>
           <Route index="*" element={<HomeScreen />} />
           <Route path="about-us" element={<AboutScreen />} />
@@ -46,10 +45,12 @@ function App() {
               </DashboardPrivateRoute>
             }
           >
-            <Route index element={<Dashboard />} />
+            <Route index element={<DashboardScreen />} />
+            <Route path="settings" element={<SettingsScreen />} />
+            <Route path="patients" element={<PatientsScreen />} />
+            <Route path="doctor" element={<DoctorScreen />} />
           </Route>
         </Routes>
-        {/* <Footer /> */}
       </BrowserRouter>
     </ThemeProvider>
   )
