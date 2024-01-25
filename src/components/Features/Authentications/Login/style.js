@@ -4,6 +4,5 @@ export const LogInImage = styled('div')({
   background: "url('MaleDoctor.jpg') no-repeat",
   backgroundSize: 'cover',
   height: '100vh',
-  flex: 1,
   backgroundPosition: 'center',
 })

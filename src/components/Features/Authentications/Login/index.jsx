@@ -1,4 +1,4 @@
-import { Stack, useMediaQuery } from '@mui/material'
+import { Box, Stack, useMediaQuery } from '@mui/material'
 import { LogInImage } from './style'
 import LogInForm from '../../../LogInForm'
 
@@ -7,13 +7,11 @@ function Login() {
 
   return (
     <>
-      <Stack direction={{ xs: 'column', sm: 'row' }}>
-        <LogInImage
-          sx={{
-            display: isDesktop ? 'flex' : 'none',
-          }}
-        />
-        <LogInForm />
+      <Stack direction={{ md: 'row' }}>
+        <Box flex={1}>{isDesktop && <LogInImage />}</Box>
+        <Box flex={1}>
+          <LogInForm />
+        </Box>
       </Stack>
     </>
   )

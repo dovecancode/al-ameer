@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
-  width: '8rem',
+  width: '9rem',
 }))
 
 function SignUpForm() {
@@ -61,12 +61,12 @@ function SignUpForm() {
   return (
     <>
       <Stack
-        sx={{ flex: 1, pt: '10rem' }}
+        sx={{ pt: '10rem' }}
         direction={{ xs: 'column' }}
         spacing={{ xs: 6 }}
         textAlign="center"
       >
-        <Box sx={{ mt: 4 }}>
+        <Box>
           <TopLogo />
         </Box>
         <Box
@@ -75,7 +75,7 @@ function SignUpForm() {
           display="flex"
           gap={{ xs: 3 }}
           flexDirection="column"
-          paddingX={isDesktop ? '34.5rem' : '4rem'}
+          paddingX={isDesktop ? '34.5rem' : '1.5rem'}
           onSubmit={handleSubmit(onSubmit)}
         >
           <FormControl sx={{ gap: 3 }}>
@@ -170,7 +170,7 @@ function SignUpForm() {
           <Stack
             direction={{ xs: 'row' }}
             spacing={{ xs: 2 }}
-            paddingX={isDesktop ? '34.5rem' : '8rem'}
+            paddingX={isDesktop ? '34.5rem' : '30%'}
           >
             <Item>
               <GoogleIcon sx={{ fontSize: '2rem', color: '#d32f2f' }} />

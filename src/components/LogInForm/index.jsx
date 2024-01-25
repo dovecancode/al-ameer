@@ -55,7 +55,7 @@ function LogInForm() {
   return (
     <>
       <Stack
-        sx={{ flex: 1, pt: '10rem' }}
+        sx={{ pt: '10rem' }}
         direction={{ xs: 'column' }}
         spacing={{ xs: 6 }}
         textAlign="center"
@@ -146,7 +146,7 @@ function LogInForm() {
           <Stack
             direction={{ xs: 'row' }}
             spacing={{ xs: 2 }}
-            paddingX={isDesktop ? '34.5rem' : '8rem'}
+            paddingX={isDesktop ? '34.5rem' : '30%'}
           >
             <Item>
               <GoogleIcon sx={{ fontSize: '2rem', color: '#d32f2f' }} />
