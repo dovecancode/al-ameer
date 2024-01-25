@@ -1,64 +1,83 @@
-import {
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableRow,
-} from '@mui/material'
+import { Card, Table, TableContainer } from '@mui/material'
+import { useState } from 'react'
+import DashTableBody from '../DashTableBody'
+
+import DashToolBar from '../DashToolBar'
+
 import DashTableHead from '../../shared/DashTableHead'
 
-function createData(name, calories, fat, carbs, protein) {
-  return { name, calories, fat, carbs, protein }
-}
+import patientsData from './data'
 
-const rows = [
-  createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-  createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-  createData('Eclair', 262, 16.0, 24, 6.0),
-  createData('Cupcake', 305, 3.7, 67, 4.3),
-  createData('Gingerbread', 356, 16.0, 49, 3.9),
+const header = [
+  'Patient ID',
+  'Patient Name',
+  'Gender',
+  'Age',
+  'Date of Birth',
+  'Address',
+  'Contact Number',
+  'Disease',
+  'Doctor Assigned',
+  'Status',
 ]
 
-const header = ['Patient ID', 'Patient Name', 'Gender', 'Age', 'Date of Birth', 'Address', 'Contact Number', 'Disease', 'Doctor Assigned', 'Status']
-
-const backgroundColor = '#159EEC'
-
 function PatientDataTable() {
+  const [patientQuery, setPatientQuery] = useState('')
+  const [selected, setSelected] = useState([])
+
+  function handleQuery(q) {
+    setPatientQuery(q)
+  }
+
+  function handleClickAllItems(e) {
+    if (e.target.checked) {
+      const selectAll = patientsData.map((data) => data.patientID)
+      setSelected(selectAll)
+      return
+    }
+    setSelected([])
+  }
+
+  // this will fire and activate all checkebox in one go if handleClickAllItems fires
+  function isSelected(id) {
+    return selected.indexOf(id) !== -1
+  }
+
+  function handleClickSelectedItem(e, id) {
+    setSelected((prev) => [...prev, id])
+    // const idx = selected.indexOf(id)
+    // let newSelected = []
+    // if (idx === -1) {
+    //   setSelected(idx)
+    // }
+    console.log(selected)
+  }
+
   return (
     <>
-      <Paper sx={{ width: '100%', mb: 2 }}>
+      <Card sx={{ width: '100%', mb: 2 }}>
+        <DashToolBar
+          selectedItems={selected}
+          query={patientQuery}
+          onQuery={handleQuery}
+        />
         <TableContainer>
           <Table aria-label="simple table">
-            <DashTableHead columnHeader={header} bgcolor={backgroundColor}/>
-            <TableBody>
-              {rows.map((row, idx) => (
-                <TableRow
-                  key={`row-${idx}`}
-                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                >
-                  <TableCell
-                    sx={{ fontSize: '1.2rem' }}
-                    component="th"
-                    scope="row"
-                  >
-                    {row.name}
-                  </TableCell>
-                  <TableCell>{row.calories}</TableCell>
-                  <TableCell>{row.fat}</TableCell>
-                  <TableCell>{row.carbs}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
-                  <TableCell>{row.protein}</TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
+            <DashTableHead
+              columnHeader={header}
+              bgcolor="#159EEC"
+              selectAll={selected.length}
+              onSelectAllItems={handleClickAllItems}
+            />
+            <DashTableBody
+              query={patientQuery}
+              patientsData={patientsData}
+              onSelectItem={handleClickSelectedItem}
+              isSelected={isSelected}
+            />
           </Table>
         </TableContainer>
-      </Paper>
+      </Card>
     </>
   )
 }

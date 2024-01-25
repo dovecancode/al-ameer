@@ -1,11 +1,11 @@
 import { Checkbox, TableHead, TableRow } from '@mui/material'
-import PropTypes from 'prop-types'
 import { TCell } from './DashTableHead.elements'
 
-function DashTableHead({ selectAll, onSelectAllItems, columnHeader, bgcolor }) {
+import PropTypes from 'prop-types'
+
+function DashTableHead({ selectAll, onSelectAllItems }) {
   return (
-    // Please create a header array
-    <TableHead sx={{ backgroundColor: bgcolor }}>
+    <TableHead>
       <TableRow>
         <TCell>
           <Checkbox
@@ -15,19 +15,24 @@ function DashTableHead({ selectAll, onSelectAllItems, columnHeader, bgcolor }) {
             onChange={onSelectAllItems}
           />
         </TCell>
-        {columnHeader.map((header, idx) => (
-          <TCell key={`theader-#${idx}`}>{header}</TCell>
-        ))}
+        <TCell>Patient ID</TCell>
+        <TCell>Patient Name</TCell>
+        <TCell>Gender</TCell>
+        <TCell>Age</TCell>
+        <TCell>Date of Birth</TCell>
+        <TCell>Address</TCell>
+        <TCell>Contact Number</TCell>
+        <TCell>Disease</TCell>
+        <TCell>Doctor Assigned</TCell>
+        <TCell>Status</TCell>
       </TableRow>
     </TableHead>
   )
 }
 
 DashTableHead.propTypes = {
-  columnHeader: PropTypes.array,
-  bgcolor: PropTypes.string,
-  selectAll: PropTypes.number,
   onSelectAllItems: PropTypes.func,
+  selectAll: PropTypes.number,
 }
 
 export default DashTableHead
