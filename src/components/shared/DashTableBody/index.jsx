@@ -16,7 +16,7 @@ function DashTableBody({
   })
 
   return (
-    <TableBody>
+    <TableBody sx={{width:'100%'}}>
       {passedData.map((data, idx) => {
         const isSelectedItem = isSelected(data.dataID)
 
