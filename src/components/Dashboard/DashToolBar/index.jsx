@@ -6,7 +6,7 @@ import { TheToolBar } from './DashToolBar.elements'
 
 function DashToolBar({ selectedItems, query, onQuery }) {
   return (
-    <TheToolBar>
+    <TheToolBar iselectitem={selectedItems.length}>
       {selectedItems.length > 0 ? (
         <Box
           sx={{
@@ -25,7 +25,7 @@ function DashToolBar({ selectedItems, query, onQuery }) {
         </Box>
       ) : (
         <TextField
-          value={query}
+          value={query.trimStart()}
           onChange={(e) => onQuery(e.target.value)}
           fullWidth
           size="small"
