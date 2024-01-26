@@ -6,7 +6,7 @@ export const Logo = styled(Typography)(() => ({
   justifyContent: 'center',
   alignItems: 'center',
   color: '#1F2B6C',
-  fontSize: '4rem',
+  fontSize: 'clamp(1.6rem, 5vw, 3.5rem)',
   marginBlock: '3rem',
 }))
 

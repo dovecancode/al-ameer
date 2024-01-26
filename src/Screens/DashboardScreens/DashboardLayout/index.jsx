@@ -6,12 +6,12 @@ import DashSidebar from '../../../components/Dashboard/DashSidebar'
 function DashboardLayout() {
   return (
     <Stack direction="row" sx={{ background: '#F7F9FA' }}>
-      <Box sx={{ borderRight: '0.2rem #eee solid' }}>
+      <Box sx={{ flex: 1, borderRight: '0.2rem #eee solid' }}>
         <DashSidebar />
       </Box>
       <Box
         sx={{
-          width: '100%',
+          flex: 5,
         }}
       >
         <Container
