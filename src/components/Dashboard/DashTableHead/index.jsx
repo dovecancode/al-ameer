@@ -1,5 +1,5 @@
 import { Checkbox, TableHead, TableRow } from '@mui/material'
-import { TCell } from './DashTableHead.elements'
+import { TCell } from './DashTableHead.elements.js'
 
 import PropTypes from 'prop-types'
 
