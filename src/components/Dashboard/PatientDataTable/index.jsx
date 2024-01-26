@@ -19,6 +19,7 @@ const header = [
   'Disease',
   'Doctor Assigned',
   'Status',
+  '',
 ]
 
 function PatientDataTable() {
