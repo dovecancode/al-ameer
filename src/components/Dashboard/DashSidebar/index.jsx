@@ -48,7 +48,6 @@ function DashSidebar() {
                 sx={{
                   display: 'flex',
                   flexDirection: 'column',
-                  width: '30rem',
                 }}
               >
                 <Box>
@@ -150,7 +149,7 @@ function DashSidebar() {
       ) : (
         <Box
           component="section"
-          sx={{ display: 'flex', flexDirection: 'column', width: '30rem' }}
+          sx={{ display: 'flex', flexDirection: 'column' }}
         >
           <Box>
             <Logo variant="h1">
