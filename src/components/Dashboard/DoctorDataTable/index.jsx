@@ -27,11 +27,12 @@ function DoctorDataTable() {
     setSelectedItems([])
   }
 
-  // select all items with checkbox
+  //! select all items with checkbox
   function isSelected(id) {
     return selectedItems.indexOf(id) !== -1
   }
 
+  //! handles the checkbox
   function handleClickSelectedItem(id) {
     const selectedIndex = selectedItems.indexOf(id)
     let newSelected = []

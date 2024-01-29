@@ -12,6 +12,7 @@ import {
 } from './DoctorSingleCard.element'
 
 function DoctorCard({ doctorInfoIndividual }) {
+  // handles the style for the icons
   const SocialMediaBox = ({ backgroundColor, iconComponent, link }) => {
     const marginRight =
       iconComponent.type === FaLinkedinIn || iconComponent.type === FaFacebookF
