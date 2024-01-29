@@ -7,6 +7,7 @@ import {
   DoctorsScreen,
   HomeScreen,
   NewsScreen,
+  PageNotFoundScreen,
   ServicesScreen,
 } from './Screens'
 import theme from './ThemeChanger'
@@ -50,6 +51,8 @@ function App() {
             <Route path="patients" element={<PatientsScreen />} />
             <Route path="doctor" element={<DoctorScreen />} />
           </Route>
+
+          <Route path="*" exact={true} element={<PageNotFoundScreen />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
