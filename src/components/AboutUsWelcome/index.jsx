@@ -5,6 +5,7 @@ import WelcomingStaff from '../../assets/img/aboutus/welcome-staff.jpg'
 import { items } from './data.js'
 
 function AboutUsWelcome() {
+  // handles the media query
   const isMobile = useMediaQuery('(max-width:425px)')
   const isTablet = useMediaQuery('(max-width:768px)')
   const isLaptop = useMediaQuery('(max-width:1024px)')

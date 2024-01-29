@@ -9,6 +9,8 @@ function DashTableBody({
   onSelectItem,
   columns,
 }) {
+
+  // filters array of any specified column.
   passedData = passedData.filter((data) => {
     return columns.some((column) =>
       `${data[column.field]}`.toLowerCase().includes(query.toLowerCase())
@@ -17,6 +19,7 @@ function DashTableBody({
 
   return (
     <TableBody sx={{width:'100%'}}>
+      {/* pass a data form an object */}
       {passedData.map((data, idx) => {
         const isSelectedItem = isSelected(data.dataID)
 
@@ -34,6 +37,7 @@ function DashTableBody({
                 onClick={(e) => onSelectItem(e, data.dataID)}
               />
             </TBodyCell>
+            {/* arrange the data based on the arrangement of the column variable */}
             {columns.map((column, colIdx) => (
               <TBodyCell key={`cell-${idx}-${colIdx}`}>
                 {data[column.field]}

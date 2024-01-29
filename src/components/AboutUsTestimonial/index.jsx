@@ -8,6 +8,7 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 
 function AboutUsTestimonial() {
+  // inject a classname directly in swiper js
   const renderBullet = (index, className) => {
     return `<span class="custom-pagination ${className}"></span>`
   }
