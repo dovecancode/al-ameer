@@ -1,4 +1,4 @@
-![Al-Ameer](C:\Users\Hugh Owen\Desktop\al-ameer\public\Al-Ameer.JPG)
+![Al-Ameer](https://github.com/dovecancode/al-ameer/assets/143063497/d577a851-2f3b-4075-98a2-30f13c8d52ed)
 
 # Description:
 
