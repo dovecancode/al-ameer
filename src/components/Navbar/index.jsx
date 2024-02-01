@@ -22,6 +22,7 @@ function Navbar() {
   const [isToggle, setIsToggle] = useState(false)
   const [scrolling, setScrolling] = useState(false)
 
+  // handles the scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -38,6 +39,7 @@ function Navbar() {
     }
   }, [])
 
+  // handles toggle effect
   const handleOpenUserMenu = (event) => {
     setAnchorElUser(event.currentTarget)
     setIsToggle(!isToggle)

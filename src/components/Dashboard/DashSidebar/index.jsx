@@ -21,6 +21,7 @@ function DashSidebar() {
   const isLaptop = useMediaQuery('(max-width:1024px)')
   const [boxVisible, setBoxVisible] = useState(false)
 
+  // query if the icon is visible or not
   const clickIcon = () => {
     setBoxVisible(!boxVisible)
     console.log('Box Visibility:', boxVisible)

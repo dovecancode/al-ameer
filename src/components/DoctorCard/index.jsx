@@ -12,6 +12,7 @@ import {
 } from './DoctorCard.Element'
 
 function DoctorCard({ doctorData }) {
+  // handles the style of the icons
   const SocialMediaBox = ({ backgroundColor, iconComponent, link }) => {
     const marginRight =
       iconComponent.type === FaLinkedinIn || iconComponent.type === FaFacebookF
