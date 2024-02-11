@@ -1,7 +1,6 @@
-import DashAddButton from "../../../components/Dashboard/DashAddButton"
-import DoctorDataTable from "../../../components/Dashboard/DoctorDataTable"
-import PatientModalForm from "../../../components/Dashboard/PatientModalForm"
-
+import DashAddButton from '../../../components/Dashboard/DashAddButton'
+import DoctorDataTable from '../../../components/Dashboard/DoctorDataTable'
+import PatientModalForm from '../../../components/Dashboard/PatientModalForm'
 
 function DoctorScreen() {
   return (

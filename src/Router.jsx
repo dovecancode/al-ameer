@@ -17,12 +17,20 @@ import {
 
 import App from './App'
 import DashboardPrivateRoute from './components/DashboardPrivateRoute'
-import { Dashboard } from './Screens/DashboardScreens'
+import Error from './components/Error'
+import NotFound from './components/NotFound'
+import {
+  DashboardLayout,
+  DashboardScreen,
+  DoctorScreen,
+  PatientsScreen,
+  SettingsScreen,
+} from './Screens/DashboardScreens'
 
 const Router = () => {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<App />}>
+      <Route path="/" element={<App />} errorElement={<Error />}>
         <Route index="*" element={<HomeScreen />} />
         <Route path="about-us" element={<AboutScreen />} />
         <Route path="services" element={<ServicesScreen />} />
@@ -32,9 +40,26 @@ const Router = () => {
         <Route path="appointment" element={<AppointmentScreen />} />
 
         {/* dashboard route */}
-        <Route path="" element={<DashboardPrivateRoute />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+        <Route
+          path="/dashboard/*"
+          element={
+            <DashboardPrivateRoute>
+              <DashboardLayout />
+            </DashboardPrivateRoute>
+          }
+          errorElement={<Error />}
+        >
+          <Route index element={<DashboardScreen />} />
+          <Route
+            path="patients"
+            element={<PatientsScreen />}
+            errorElement={<Error />}
+          />
+          <Route path="doctor" element={<DoctorScreen />} />
+          <Route path="settings" element={<SettingsScreen />} />
         </Route>
+
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   )

@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types'
 import { createContext, useContext, useState } from 'react'
+import usePatients from '../hooks/patients/usePatients'
 
 const ThemeContext = createContext()
 
 function ThemeProvider({ children }) {
+  let { patients, status } = usePatients()
   const [isDialog, setIsDialog] = useState(false)
 
   function handleClickDialog() {
@@ -11,7 +13,14 @@ function ThemeProvider({ children }) {
   }
 
   return (
-    <ThemeContext.Provider value={{ isDialog, handleClickDialog }}>
+    <ThemeContext.Provider
+      value={{
+        isDialog,
+        handleClickDialog,
+        patients,
+        status,
+      }}
+    >
       {children}
     </ThemeContext.Provider>
   )
