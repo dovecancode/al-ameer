@@ -1,60 +1,84 @@
-import { Checkbox, Stack, TableBody, TableRow, Typography } from '@mui/material'
+import {
+  Checkbox,
+  CircularProgress,
+  TableBody,
+  TableRow,
+  Typography,
+} from '@mui/material'
 import { TBodyCell } from './DashTableBody.elements'
 
 import PropTypes from 'prop-types'
-import { CiEdit } from 'react-icons/ci'
-import { LuTrash } from 'react-icons/lu'
+
+import usePatients from '../../../hooks/patients/usePatients'
 import { AlNoData } from '../../shared/Icons'
 
-import { FaEye } from 'react-icons/fa'
+import useDelete from '../../../hooks/patients/useDelete'
 
-function DashTableBody({ query, patientsData, isSelected, onSelectItem }) {
-  patientsData = patientsData.filter((patient) => {
-    return `${patient.patientName} ${patient.patientID}`
+import DashTableActions from '../DashTableActions'
+
+function DashTableBody({ query, isSelected, onSelectItem }) {
+  let { patients, setPatients, status } = usePatients()
+
+  const { status: deleteStatus, onDeletePatient } = useDelete()
+
+  const isDeleting = deleteStatus === 'loading'
+
+  async function handleDelete(id) {
+    await onDeletePatient(id)
+    setPatients(patients?.filter((patient) => patient.patient_id !== id))
+  }
+
+  // patients = []
+  patients = patients?.filter((patient) => {
+    return `${patient.first_name} ${patient.local_id}`
       .toLowerCase()
       .includes(query.toLowerCase())
   })
 
+  const isLoading = status === 'loading'
+
   return (
     <TableBody>
-      {!!patientsData.length &&
-        patientsData.map((patient, idx) => {
-          const isSelectedItem = isSelected(patient.patientID)
-          return (
-            <TableRow
-              hover
-              key={`row-${idx}`}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
-              <TBodyCell>
-                <Checkbox
-                  inputProps={{ 'aria-label': 'Checkbox demo' }}
-                  sx={{ '& .MuiSvgIcon-root': { fontSize: 20 } }}
-                  checked={isSelectedItem}
-                  onClick={() => onSelectItem(patient.patientID)}
-                />
-              </TBodyCell>
-              <TBodyCell>{patient.patientID}</TBodyCell>
-              <TBodyCell>{patient.patientName}</TBodyCell>
-              <TBodyCell>{patient.gender}</TBodyCell>
-              <TBodyCell>{patient.age}</TBodyCell>
-              <TBodyCell>{patient.dBirth}</TBodyCell>
-              <TBodyCell>{patient.address}</TBodyCell>
-              <TBodyCell>{patient.phoneNumber}</TBodyCell>
-              <TBodyCell>{patient.disease}</TBodyCell>
-              <TBodyCell>{patient.dDoctor}</TBodyCell>
-              <TBodyCell>{patient.patientStatus}</TBodyCell>
-              <TBodyCell>
-                <Stack direction={{ sm: 'row' }} spacing={1}>
-                  <FaEye size={20} />
-                  <CiEdit size={20} />
-                  <LuTrash size={20} />
-                </Stack>
-              </TBodyCell>
-            </TableRow>
-          )
-        })}
-      {!patientsData.length && (
+      {patients?.map((patient, idx) => {
+        const isSelectedItem = isSelected(patient?.patient_id)
+
+        return (
+          <TableRow
+            hover
+            key={`row-${idx}`}
+            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+          >
+            <TBodyCell>
+              <Checkbox
+                inputProps={{ 'aria-label': 'Checkbox demo' }}
+                sx={{ '& .MuiSvgIcon-root': { fontSize: 20 } }}
+                checked={isSelectedItem}
+                onClick={() => onSelectItem(patient?.patient_id)}
+              />
+            </TBodyCell>
+            <TBodyCell>{patient?.local_id}</TBodyCell>
+            <TBodyCell>
+              {patient?.first_name} {patient?.last_name}
+            </TBodyCell>
+            <TBodyCell>{patient?.gender}</TBodyCell>
+            <TBodyCell>{patient?.age}</TBodyCell>
+            <TBodyCell>
+              {patient?.doctors?.first_name} {patient?.doctors?.last_name}
+            </TBodyCell>
+            <TBodyCell>pending</TBodyCell>
+            <TBodyCell>
+              <DashTableActions
+                patientId={patient.patient_id}
+                onDelete={handleDelete}
+                isDeleting={isDeleting}
+              />
+            </TBodyCell>
+          </TableRow>
+        )
+      })}
+
+      {/* render if search query is not in the data */}
+      {patients?.length === 0 && query.length > 1 && (
         <TableRow>
           <TBodyCell
             colSpan="10"
@@ -65,6 +89,30 @@ function DashTableBody({ query, patientsData, isSelected, onSelectItem }) {
               {query.substring(0, 1).toUpperCase() +
                 query.substring(1, query.length)}
               &nbsp;is Not found
+            </Typography>
+          </TBodyCell>
+        </TableRow>
+      )}
+      {isLoading ? (
+        <TableRow sx={{ height: '20vh' }}>
+          <TBodyCell
+            colSpan="10"
+            sx={{ textAlign: 'center', verticalAlign: 'middle' }}
+          >
+            <CircularProgress />
+          </TBodyCell>
+        </TableRow>
+      ) : patients?.length || query.length ? (
+        ''
+      ) : (
+        <TableRow>
+          <TBodyCell
+            colSpan="10"
+            sx={{ textAlign: 'center', verticalAlign: 'middle' }}
+          >
+            <AlNoData size="20" />
+            <Typography variant="h3" component="p" color="crimson">
+              No patient as of the moment
             </Typography>
           </TBodyCell>
         </TableRow>

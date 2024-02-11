@@ -4,25 +4,23 @@ import DashTableBody from '../DashTableBody'
 
 import DashToolBar from '../DashToolBar'
 
+import usePatients from '../../../hooks/patients/usePatients'
 import DashTableHead from '../../shared/DashTableHead'
 
-import patientsData from './data'
+// import patientsData from './data'
 
 const header = [
   'Patient ID',
   'Patient Name',
   'Gender',
   'Age',
-  'Date of Birth',
-  'Address',
-  'Contact Number',
-  'Disease',
   'Doctor Assigned',
   'Status',
   '',
 ]
 
 function PatientDataTable() {
+  const { patients } = usePatients()
   const [patientQuery, setPatientQuery] = useState('')
   const [selected, setSelected] = useState([])
 
@@ -32,7 +30,7 @@ function PatientDataTable() {
 
   function handleClickAllItems(e) {
     if (e.target.checked) {
-      const selectAll = patientsData.map((data) => data.patientID)
+      const selectAll = patients?.map((data) => data.patient_id)
       setSelected(selectAll)
       return
     }
@@ -72,7 +70,7 @@ function PatientDataTable() {
           onQuery={handleQuery}
         />
         <TableContainer>
-          <Table aria-label="simple table">
+          <Table aria-label="simple table" sx={{ minWidth: 650 }}>
             <DashTableHead
               columnHeader={header}
               bgcolor="#159EEC"
@@ -81,7 +79,6 @@ function PatientDataTable() {
             />
             <DashTableBody
               query={patientQuery}
-              patientsData={patientsData}
               onSelectItem={handleClickSelectedItem}
               isSelected={isSelected}
             />

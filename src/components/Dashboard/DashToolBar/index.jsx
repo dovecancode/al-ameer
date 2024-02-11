@@ -28,6 +28,7 @@ function DashToolBar({ selectedItems, query, onQuery }) {
           value={query.trimStart()}
           onChange={(e) => onQuery(e.target.value)}
           fullWidth
+          autoComplete="off"
           size="small"
           placeholder="Search patients..."
           InputProps={{
